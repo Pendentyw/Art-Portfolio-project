@@ -1,0 +1,144 @@
+.section-link {
+  text-decoration: none;
+  color: rgb(38, 38, 38);
+  .big-preview-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.section-dream {
+  justify-content: start;
+  .dream-container {
+    .project-description {
+      margin-right: 20rem;
+    }
+    .section-1-image {
+      width: 80rem;
+      height: 60rem;
+      background-image: url('/src/img/hq-wave.jpg');
+      background-color: #fff;
+      border-top-right-radius: 50rem;
+      border-bottom-right-radius: 50rem;
+      transition: background-image 0.3s ease-out;
+      &:hover {
+        background-image: url('/src/movie/nocne-tiki-short-gif.gif');
+        // border-bottom-right-radius: 4rem;
+        // border-top-right-radius: 4rem;
+      }
+    }
+  }
+}
+
+.section-fox {
+  background-size: cover;
+  background-position: center;
+
+  .fox-images-container {
+    .preview-image {
+      width: 20rem;
+      height: 60rem;
+      background-size: cover;
+      background-position: center;
+      transition: width 0.4s ease-in-out;
+      &:hover {
+        width: 40rem;
+      }
+
+      &.fox-preview-image-1 {
+        background-image: url('/src/img/hq-kitsune.jpg');
+        border-radius: 20rem;
+      }
+      &.fox-preview-image-2 {
+        background-image: url('/src/img/hq-fox.jpg');
+        border-radius: 5rem;
+      }
+      &.fox-preview-image-3 {
+        background-image: url('/src//img/hq-plant.jpg');
+        border-bottom-left-radius: 20rem;
+      }
+    }
+  }
+}
+
+.section-animals {
+  justify-content: start;
+  .animals-images-container {
+    justify-content: start;
+    align-items: center;
+    .preview-image {
+      margin-left: 4rem;
+      height: 55rem;
+      background-size: cover;
+      background-position: center;
+      transition: width 0.4s ease-in-out, border-radius 0.4s ease-out;
+      &.animals-preview-image-1 {
+        width: 40rem;
+        background-image: url('/src/img/hq-borbo.jpg');
+        background-attachment: fixed;
+        background-size: 20%;
+        background-position: left;
+        border-radius: 40rem;
+        &:hover {
+          border-radius: 4rem;
+          border-top-right-radius: 50rem;
+          border-bottom-right-radius: 50rem;
+        }
+      }
+      &.animals-preview-image-2 {
+        background-image: url('/src/img/hq-goat.jpg');
+        border-radius: 4rem;
+        border-top-right-radius: 50rem;
+        border-bottom-right-radius: 50rem;
+        width: 40rem;
+        &:hover {
+          border-radius: 4rem;
+        }
+      }
+    }
+  }
+}
+
+.section-photo {
+  .section-4-container {
+    position: relative;
+    justify-content: space-between;
+    flex-direction: row;
+    .photography-text {
+      margin-top: 24rem;
+    }
+    .preview-image {
+      height: 35rem;
+      background-size: cover;
+      background-size: cover;
+      background-position: center;
+      transition: width 0.4s ease-out, border-radius 0.3s ease-out;
+      &.section-4-image-1 {
+        position: absolute;
+        top: 0;
+        width: 70rem;
+        right: 0;
+        background-image: url('/src/img/hq-leaf.jpg');
+        border-top-left-radius: 50rem;
+        border-bottom-left-radius: 50rem;
+        &:hover {
+          border-bottom-left-radius: 0rem;
+        }
+      }
+      &.section-4-image-2 {
+        position: absolute;
+        width: 50rem;
+        left: 0;
+        margin-top: 50rem;
+        background-image: url('/src/img/rysia.jpg');
+        border-bottom-right-radius: 50rem;
+        &:hover {
+          border-top-left-radius: 50rem;
+          border-bottom-left-radius: 50rem;
+        }
+      }
+    }
+  }
+}

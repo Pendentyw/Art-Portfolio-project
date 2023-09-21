@@ -1,0 +1,63 @@
+.nav-animation {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: nav-animation;
+}
+
+.nav-animation-reverse {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-name: nav-animation;
+}
+
+@keyframes nav-animation {
+  from {
+    top: 0;
+  }
+  to {
+    top: -5rem;
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 2px 2px 10px rgba(159, 159, 159, 0.132);
+
+  .nav-bar {
+    height: 5rem;
+    width: 100%;
+    background-color: rgb(244, 239, 239);
+  }
+  .nav-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+    font-size: 1.5rem;
+    a {
+      text-decoration: none;
+      color: rgb(83, 83, 83);
+      transition: color 0.4 ease-out;
+      &:hover {
+        color: rgb(190, 133, 123);
+      }
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 20%;
+    align-items: center;
+  }
+  li {
+    display: flex;
+    flex-direction: row;
+  }
+}
