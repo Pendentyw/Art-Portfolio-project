@@ -20,7 +20,7 @@
   .container {
     .book-preview-photo {
       border-top-left-radius: 10rem;
-      width: 80rem;
+      width: 63rem;
     }
   }
 }
@@ -32,7 +32,7 @@
   .diagrams-container {
     justify-content: space-between;
     .dream-book-background-image-1 {
-      width: 90rem;
+      width: 60rem;
       height: 60rem;
       background-image: url('/src/img/dream-page/hq-waves-transparent.png');
       border-top-right-radius: 40rem;
@@ -43,36 +43,74 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+
     .project-description {
       margin-left: 20rem;
     }
     .dream-book-background-image-2 {
-      width: 80rem;
-      height: 80rem;
+      width: 55rem;
+      height: 55rem;
       transform: translateX(55%);
       background-size: cover;
       background-image: url('/src/img/dream-page/h1-kula.png');
       transition: transform 0.5s ease-in;
       &:hover {
-        transform: rotate(130deg);
+        transform: rotate(180deg);
       }
-    }
-
-    video {
-      width: 100vw;
-      border-radius: 2rem;
     }
   }
 
   .psycho-container {
     justify-content: space-between;
     .psycho-background-image-1 {
-      width: 90rem;
+      width: 60rem;
       height: 60rem;
       background-image: url('/src/img/dream-page/hq-psycho-transparent.png');
       background-size: cover;
       background-position: center;
       border-top-right-radius: 40rem;
+    }
+  }
+}
+
+.section-book {
+  .book-carousel-container {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    .card {
+      margin: 3rem;
+      img {
+        width: 60rem;
+        border-radius: 2rem;
+      }
+    }
+  }
+}
+
+.section-video {
+  .video-container {
+    justify-content: center;
+    overflow: hidden;
+    video {
+      width: 75rem;
+      border-bottom-right-radius: 10rem;
+    }
+  }
+}
+
+.section-gallery {
+  .gallery-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    img {
+      margin: 2rem;
+      border-radius: 1rem;
+      width: 25rem;
+      &:hover {
+        scale: 110%;
+      }
     }
   }
 }

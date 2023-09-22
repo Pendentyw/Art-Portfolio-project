@@ -1,3 +1,5 @@
+import slider from './src/js/components/slide.js';
+
 console.log('XD');
 if (module.hot) {
   module.hot.accept();
