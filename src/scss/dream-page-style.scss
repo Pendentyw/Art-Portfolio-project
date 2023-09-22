@@ -18,14 +18,17 @@
 .section-about-project {
   padding: 0;
   .container {
+    overflow: hidden;
     .book-preview-photo {
-      border-top-left-radius: 10rem;
-      width: 63rem;
+      border-top-left-radius: 2rem;
+      width: 70rem;
+      scale: 130%;
     }
   }
 }
 
 .section-about-books {
+  padding-top: 0;
   .container {
     padding: 5.5rem 0;
   }
@@ -75,9 +78,13 @@
 
 .section-book {
   .book-carousel-container {
-    overflow: hidden;
     display: flex;
     justify-content: space-evenly;
+    transition: transform 1s ease-out;
+    overflow: hidden;
+    &.change-position {
+      transform: translateX(50%);
+    }
     .card {
       margin: 3rem;
       img {
@@ -107,7 +114,7 @@
     img {
       margin: 2rem;
       border-radius: 1rem;
-      width: 25rem;
+      width: 22rem;
       &:hover {
         scale: 110%;
       }
