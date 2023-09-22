@@ -16,6 +16,16 @@
 }
 
 .section-about-project {
+  padding: 0;
+  .container {
+    .book-preview-photo {
+      border-top-left-radius: 10rem;
+      width: 80rem;
+    }
+  }
+}
+
+.section-about-books {
   .container {
     padding: 5.5rem 0;
   }
@@ -28,7 +38,8 @@
       border-top-right-radius: 40rem;
     }
   }
-  .psycho-container {
+
+  .dreams-container {
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
@@ -50,6 +61,18 @@
     video {
       width: 100vw;
       border-radius: 2rem;
+    }
+  }
+
+  .psycho-container {
+    justify-content: space-between;
+    .psycho-background-image-1 {
+      width: 90rem;
+      height: 60rem;
+      background-image: url('/src/img/dream-page/hq-psycho-transparent.png');
+      background-size: cover;
+      background-position: center;
+      border-top-right-radius: 40rem;
     }
   }
 }
