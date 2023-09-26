@@ -1,0 +1,38 @@
+@import 'document-style.scss';
+@import 'navigation.scss';
+
+.section-about-project {
+  overflow: hidden;
+  padding-top: 8rem;
+  h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 130px;
+    color: rgb(47, 47, 47);
+    z-index: 1000;
+  }
+  .image-container {
+    justify-content: space-around;
+    img {
+      width: 70rem;
+      border-bottom-right-radius: 10rem;
+      border-top-left-radius: 10rem;
+      transition: transform 0.4s ease-in;
+      &:hover {
+        transform: scale(103%);
+      }
+    }
+  }
+}
+
+.section-about-technique {
+  overflow: hidden;
+  .fox-head-sketch {
+    width: 60rem;
+    height: 113rem;
+    opacity: 89%;
+    background-position: cover;
+    background-image: url('/src/img/fox-page/foxhead.png');
+  }
+}
