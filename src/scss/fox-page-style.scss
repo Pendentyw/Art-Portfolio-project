@@ -28,11 +28,40 @@
 
 .section-about-technique {
   overflow: hidden;
-  .fox-head-sketch {
-    width: 60rem;
-    height: 113rem;
-    opacity: 89%;
-    background-position: cover;
-    background-image: url('/src/img/fox-page/foxhead.png');
+
+  .fox-heads-container {
+    position: absolute;
+    right: 10rem;
+    .fox-head {
+      width: 40rem;
+      height: 40rem;
+      opacity: 89%;
+      background-position: center;
+      background-size: cover;
+
+      &.fox-head-sketch {
+        background-image: url('/src/img/fox-page/sketch-foxhead.png');
+      }
+
+      &.fox-head-simple {
+        background-image: url('/src/img/fox-page/foxhead-simple.png');
+      }
+
+      &.fox-head-whisker {
+        background-image: url('/src/img/fox-page/foxhead.png');
+      }
+    }
+  }
+}
+
+.section-gallery {
+  color: red;
+  overflow: hidden;
+  img {
+    border-radius: 2rem;
+    transition: scale 0.4s ease-in;
+    &:hover {
+      scale: 110%;
+    }
   }
 }
