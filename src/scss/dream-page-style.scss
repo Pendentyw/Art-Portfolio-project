@@ -15,7 +15,7 @@
   margin: 10rem;
 }
 
-.section-about-project {
+.books-about-project {
   padding: 0;
   .container {
     overflow: hidden;
@@ -27,14 +27,14 @@
   }
 }
 
-.section-about-books {
+.about-books {
   padding-top: 0;
   .container {
     padding: 5.5rem 0;
   }
   .diagrams-container {
     justify-content: space-between;
-    .dream-book-background-image-1 {
+    .diagrams-background {
       width: 60rem;
       height: 60rem;
       background-image: url('/src/img/dream-page/hq-waves-transparent.png');
@@ -50,7 +50,7 @@
     .project-description {
       margin-left: 20rem;
     }
-    .dream-book-background-image-2 {
+    .dream-book-background {
       width: 55rem;
       height: 55rem;
       transform: translateX(55%);
@@ -65,9 +65,9 @@
 
   .psycho-container {
     justify-content: space-between;
-    .psycho-background-image-1 {
-      width: 60rem;
-      height: 60rem;
+    .psycho-background {
+      width: 50rem;
+      height: 50rem;
       background-image: url('/src/img/dream-page/hq-psycho-transparent.png');
       background-size: cover;
       background-position: center;
@@ -95,8 +95,8 @@
   }
 }
 
-.section-video {
-  .video-container {
+.dream-video {
+  .container {
     justify-content: center;
     overflow: hidden;
     video {
@@ -106,8 +106,8 @@
   }
 }
 
-.section-gallery {
-  .gallery-container {
+.dream-photo-gallery {
+  .container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
