@@ -1,18 +1,10 @@
 @import 'document-style.scss';
 @import 'navigation.scss';
 
-.section-about-project {
+.about-project {
   overflow: hidden;
   padding-top: 8rem;
-  h1 {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    font-size: 130px;
-    color: rgb(47, 47, 47);
-    z-index: 1000;
-  }
-  .image-container {
+  .container {
     justify-content: space-around;
     img {
       width: 70rem;
@@ -26,7 +18,7 @@
   }
 }
 
-.section-about-technique {
+.fox-about-technique {
   overflow: hidden;
 
   .fox-heads-container {
@@ -54,7 +46,7 @@
   }
 }
 
-.section-gallery {
+.fox-gallery {
   color: red;
   overflow: hidden;
   img {
