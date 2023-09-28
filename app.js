@@ -1,6 +1,7 @@
 import slider from './src/js/components/carousel.js';
 import { addScrollAnimation } from './src/js/components/scrollAnimation.js';
 import { carousel } from './src/js/components/carousel.js';
+import { playVideoOnScroll, pauseVideoOnMouseEnter } from './src/js/components/playVideo.js';
 
 //parcel
 
@@ -11,7 +12,7 @@ if (module.hot) {
 
 //hide navigation on scrolling down
 
-const prevScrollpos = window.pageYOffset;
+let prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
   const currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
@@ -40,3 +41,10 @@ addScrollAnimation(fadeUpAnimation, 'fade-up-scroll-animation', true);
 // use carousel
 
 carousel();
+
+// manage video playtime
+
+const videoToPlay = document.querySelector('.sleepwalking-video');
+
+playVideoOnScroll(videoToPlay);
+pauseVideoOnMouseEnter(videoToPlay);
