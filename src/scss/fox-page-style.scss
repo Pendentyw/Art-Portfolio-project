@@ -2,6 +2,7 @@
 @import 'navigation.scss';
 
 .about-project {
+  flex-wrap: wrap;
   overflow: hidden;
   padding-top: 8rem;
   .container {
@@ -16,6 +17,7 @@
 
 .fox-about-technique {
   overflow: hidden;
+  flex-wrap: wrap;
 
   .fox-heads-container {
     position: absolute;
@@ -43,6 +45,7 @@
 }
 
 .fox-gallery {
+  flex-wrap: wrap;
   overflow: hidden;
   .container {
     max-width: 2000px;
