@@ -15,3 +15,24 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+
+const scrollAnimation = document.querySelectorAll('.animation');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('scroll-animation');
+      } else {
+        // entry.target.classList.remove('scroll-animation');
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+//
+for (let i = 0; i < scrollAnimation.length; i++) {
+  const elements = scrollAnimation[i];
+
+  observer.observe(elements);
+}

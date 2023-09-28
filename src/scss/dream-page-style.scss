@@ -53,13 +53,9 @@
     .dream-book-background {
       width: 55rem;
       height: 55rem;
-      transform: translateX(55%);
       background-size: cover;
       background-image: url('/src/img/dream-page/h1-kula.png');
-      transition: transform 0.5s ease-in;
-      &:hover {
-        transform: rotate(180deg);
-      }
+      // transition: transform 0.5s ease-in;
     }
   }
 
@@ -77,19 +73,41 @@
 }
 
 .section-book {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  .carousel-icon {
+    position: absolute;
+    right: 10%;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+  }
   .book-carousel-container {
-    display: flex;
-    justify-content: space-evenly;
-    transition: transform 1s ease-out;
+    width: 80%;
+    height: 100rem;
     overflow: hidden;
+    position: absolute;
+    left: 0;
+    transition: left 1s ease-out;
     &.change-position {
       transform: translateX(50%);
     }
-    .card {
-      margin: 3rem;
-      img {
-        width: 60rem;
-        border-radius: 2rem;
+    .cards {
+      width: 150%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: -100rem;
+      top: 0;
+      .card {
+        margin: 3rem;
+        img {
+          width: 60rem;
+        }
       }
     }
   }
@@ -120,4 +138,15 @@
       }
     }
   }
+}
+
+.animation {
+  opacity: 0;
+  transition: all 1s ease-out;
+  transition-delay: 0.2s;
+}
+
+.scroll-animation {
+  opacity: 1;
+  transform: rotate(-60deg);
 }
