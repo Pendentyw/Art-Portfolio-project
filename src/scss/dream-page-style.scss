@@ -2,16 +2,6 @@
 @import 'navigation.scss';
 @import '/src/scss/components/scroll-animations.scss';
 
-.gallery {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 100vw;
-  img {
-    width: 800px;
-    height: auto;
-  }
-}
 .project-description {
   margin: 10rem;
 }
@@ -77,40 +67,43 @@
 }
 
 .section-book {
+  margin-bottom: 15rem;
+  margin-top: 10rem;
   position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  .carousel-icon {
+
+  .carousel-arrow {
     position: absolute;
-    right: 10%;
+    right: 15%;
+    z-index: 1000;
     width: 50px;
     height: 50px;
-    background-color: black;
+    background-color: rgb(10, 21, 17);
   }
-  .book-carousel-container {
-    width: 80%;
-    height: 100rem;
-    overflow: hidden;
+
+  .carousel-container {
+    width: 90%;
+    height: 40rem;
     position: absolute;
-    left: 0;
-    transition: left 1s ease-out;
-    &.change-position {
-      transform: translateX(50%);
-    }
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+
     .cards {
-      width: 150%;
-      height: 100%;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      pointer-events: none;
       position: absolute;
-      left: -100rem;
       top: 0;
+      left: 0;
+
       .card {
-        margin: 3rem;
+        margin: 2rem;
+        border-radius: 5px;
+
         img {
-          width: 60rem;
+          border-radius: 1rem;
+          width: 70rem;
+          height: auto;
         }
       }
     }
@@ -134,9 +127,9 @@
     flex-direction: row;
     justify-content: space-evenly;
     img {
-      margin: 2rem;
-      border-radius: 1rem;
-      width: 22rem;
+      margin: 1rem;
+      width: 24rem;
+      transition: scale 0.3s ease-out;
       &:hover {
         scale: 110%;
       }
