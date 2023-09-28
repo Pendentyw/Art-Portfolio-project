@@ -1,13 +1,18 @@
 import slider from './src/js/components/slide.js';
+import { addScrollAnimation } from './src/js/components/scrollAnimation.js';
+
+//parcel
 
 console.log('XD');
 if (module.hot) {
   module.hot.accept();
 }
 
-var prevScrollpos = window.pageYOffset;
+//hide navigation on scrolling down
+
+const prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
+  const currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.querySelector('nav').classList.remove('nav-animation');
   } else {
@@ -16,23 +21,14 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
-const scrollAnimation = document.querySelectorAll('.animation');
+//use animation on scroll function
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('scroll-animation');
-      } else {
-        // entry.target.classList.remove('scroll-animation');
-      }
-    });
-  },
-  { threshold: 0.5 }
-);
-//
-for (let i = 0; i < scrollAnimation.length; i++) {
-  const elements = scrollAnimation[i];
+const rotateScrollAnimation = document.querySelectorAll('.rotate-animation');
+const opacityScrollAnimation = document.querySelectorAll('.opacity-animation');
+const easeInLeftScrollAnimation = document.querySelectorAll('.ease-in-left-animation');
+const fadeUpAnimation = document.querySelectorAll('.fade-up-animation');
 
-  observer.observe(elements);
-}
+addScrollAnimation(rotateScrollAnimation, 'rotate-scroll-animation', false);
+addScrollAnimation(opacityScrollAnimation, 'opacity-scroll-animation', true);
+addScrollAnimation(easeInLeftScrollAnimation, 'ease-in-left-scroll-animation', false);
+addScrollAnimation(fadeUpAnimation, 'fade-up-scroll-animation', true);

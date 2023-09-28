@@ -1,0 +1,48 @@
+.rotate-animation {
+  transition: transform 1s ease-out;
+  transition-delay: 0.2s;
+}
+
+.rotate-scroll-animation {
+  transform: rotate(-60deg);
+}
+
+.opacity-animation {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  transition-delay: 0.1s;
+}
+
+.opacity-scroll-animation {
+  opacity: 1;
+}
+
+.ease-in-left-animation {
+  transform: translateX(-150);
+  transition: transform 0.5s ease-out;
+  transition-delay: 0.1s;
+}
+
+.ease-in-left-scroll-animation {
+  transform: translateX(0);
+}
+
+.border-radius-animation {
+  border-radius: 0;
+}
+
+.border-radius-scroll-animation {
+  border-top-right-radius: 20rem;
+  border-bottom-right-radius: 20rem;
+}
+
+.fade-up-animation {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.3s ease-in, opacity 0.4s ease-in;
+}
+
+.fade-up-scroll-animation {
+  opacity: 1;
+  transform: translateY(0);
+}

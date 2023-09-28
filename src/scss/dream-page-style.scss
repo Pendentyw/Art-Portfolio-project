@@ -1,5 +1,6 @@
 @import 'document-style.scss';
 @import 'navigation.scss';
+@import '/src/scss/components/scroll-animations.scss';
 
 .gallery {
   display: flex;
@@ -55,7 +56,10 @@
       height: 55rem;
       background-size: cover;
       background-image: url('/src/img/dream-page/h1-kula.png');
-      // transition: transform 0.5s ease-in;
+      transition: transform 1.5s ease-in;
+      &:hover {
+        transform: rotate(140deg);
+      }
     }
   }
 
@@ -138,15 +142,4 @@
       }
     }
   }
-}
-
-.animation {
-  opacity: 0;
-  transition: all 1s ease-out;
-  transition-delay: 0.2s;
-}
-
-.scroll-animation {
-  opacity: 1;
-  transform: rotate(-60deg);
 }
