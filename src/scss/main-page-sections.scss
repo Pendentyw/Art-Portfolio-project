@@ -16,12 +16,12 @@
       margin-right: 15rem;
     }
     .dream-image {
-      width: 65rem;
+      width: 40vw;
       height: 50rem;
       background-image: url('/src/img/hq-wave.jpg');
       transition: all 0.9s ease-out;
       &:hover {
-        width: 80rem;
+        width: 50vw;
         background-image: url('/src/movie/nocne-tiki-short-gif.gif');
       }
     }
@@ -37,13 +37,13 @@
       margin-left: 10rem;
     }
     .preview-image {
-      width: 20rem;
+      width: 12vw;
       height: 60rem;
       background-size: cover;
       background-position: center;
       transition: width 0.5s ease-in-out;
       &:hover {
-        width: 30rem;
+        width: 20vw;
       }
 
       &.fox-preview-image-1 {
@@ -78,7 +78,7 @@
       background-position: center;
       transition: width 0.4s ease-in-out, border-radius 0.6s ease-out;
       &.animals-preview-image-1 {
-        width: 40rem;
+        width: 24vw;
         background-image: url('/src/img/hq-borbo.jpg');
         background-attachment: fixed;
         background-size: 20%;
@@ -95,7 +95,7 @@
         border-radius: 4rem;
         border-top-right-radius: 50rem;
         border-bottom-right-radius: 50rem;
-        width: 40rem;
+        width: 24vw;
         &:hover {
           border-radius: 4rem;
         }
@@ -121,7 +121,7 @@
       &.photo-image {
         position: absolute;
         top: 0;
-        width: 70rem;
+        width: 40vw;
         right: 0;
         background-image: url('/src/img/hq-leaf.jpg');
         border-top-left-radius: 50rem;
@@ -132,7 +132,7 @@
       }
       &.illustration-image {
         position: absolute;
-        width: 50rem;
+        width: 30vw;
         left: 0;
         margin-top: 50rem;
         background-image: url('/src/img/rysia.jpg');

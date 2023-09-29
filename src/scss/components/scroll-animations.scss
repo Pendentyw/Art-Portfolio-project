@@ -49,14 +49,14 @@
 
 .zoom-animation {
   opacity: 0;
-  scale: 100%;
+  //scale: 100%;
   transition: scale 0.3s ease-out, opacity 0.1s ease-in;
   transition-delay: 0.2s;
 }
 
 .zoom-scroll-animation {
   opacity: 1;
-  scale: 104%;
+  //scale: 104%;
 }
 
 .border-right-animation {
@@ -73,5 +73,5 @@
 // }
 
 .width-scroll-animation {
-  width: 30rem !important;
+  width: 20vw !important;
 }

@@ -9,7 +9,7 @@
   .container {
     justify-content: space-around;
     img {
-      width: 70rem;
+      width: 50vw;
       border-bottom-right-radius: 10rem;
       border-top-left-radius: 10rem;
     }
@@ -17,14 +17,20 @@
 }
 
 .fox-about-technique {
+  max-width: 100vw;
   overflow: hidden;
   flex-wrap: wrap;
+  .project-description {
+    img {
+      width: 30vw;
+    }
+  }
 
   .fox-heads-container {
     position: absolute;
     right: 10rem;
     .fox-head {
-      width: 40rem;
+      width: 20vw;
       height: 40rem;
       opacity: 89%;
       background-position: center;
@@ -49,14 +55,15 @@
   flex-wrap: wrap;
   overflow: hidden;
   .container {
-    max-width: 2000px;
+    max-width: 80vw;
     justify-content: center;
     img {
+      width: 25vw;
       // border-radius: 2rem;
       object-fit: cover;
       transition: scale 0.4s ease-in;
       &:hover {
-        scale: 90%;
+        //scale: 90%;
       }
     }
   }
