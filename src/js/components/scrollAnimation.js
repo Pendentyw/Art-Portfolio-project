@@ -9,11 +9,12 @@ export const addScrollAnimation = (selector, animation, removeAnimation) => {
         }
       });
     },
-    { threshold: 0.4 }
+    { threshold: 0.2 }
   );
   //
   for (let i = 0; i < selector.length; i++) {
     const elements = selector[i];
+    console.log('lol');
 
     observer.observe(elements);
   }

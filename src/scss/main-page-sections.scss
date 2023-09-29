@@ -9,42 +9,41 @@
   }
 }
 
-.section-dream {
+.dream {
   justify-content: start;
   .dream-container {
     .project-description {
-      margin-right: 20rem;
+      margin-right: 15rem;
     }
-    .section-1-image {
-      width: 80rem;
-      height: 60rem;
+    .dream-image {
+      width: 65rem;
+      height: 50rem;
       background-image: url('/src/img/hq-wave.jpg');
-      background-color: #fff;
-      border-top-right-radius: 50rem;
-      border-bottom-right-radius: 50rem;
-      transition: background-image 0.3s ease-out;
+      transition: all 0.9s ease-out;
       &:hover {
+        width: 80rem;
         background-image: url('/src/movie/nocne-tiki-short-gif.gif');
-        // border-bottom-right-radius: 4rem;
-        // border-top-right-radius: 4rem;
       }
     }
   }
 }
 
-.section-fox {
+.fox {
   background-size: cover;
   background-position: center;
 
   .fox-images-container {
+    .project-description {
+      margin-left: 10rem;
+    }
     .preview-image {
       width: 20rem;
       height: 60rem;
       background-size: cover;
       background-position: center;
-      transition: width 0.4s ease-in-out;
+      transition: width 0.5s ease-in-out;
       &:hover {
-        width: 40rem;
+        width: 30rem;
       }
 
       &.fox-preview-image-1 {
@@ -53,6 +52,7 @@
       }
       &.fox-preview-image-2 {
         background-image: url('/src/img/hq-fox.jpg');
+        background-position: 20%;
         border-radius: 5rem;
       }
       &.fox-preview-image-3 {
@@ -63,17 +63,20 @@
   }
 }
 
-.section-animals {
+.animals {
   justify-content: start;
   .animals-images-container {
     justify-content: start;
     align-items: center;
+    .project-description {
+      margin-left: 6rem;
+    }
     .preview-image {
       margin-left: 4rem;
       height: 55rem;
       background-size: cover;
       background-position: center;
-      transition: width 0.4s ease-in-out, border-radius 0.4s ease-out;
+      transition: width 0.4s ease-in-out, border-radius 0.6s ease-out;
       &.animals-preview-image-1 {
         width: 40rem;
         background-image: url('/src/img/hq-borbo.jpg');
@@ -101,8 +104,8 @@
   }
 }
 
-.section-photo {
-  .section-4-container {
+.photo {
+  .photo-container {
     position: relative;
     justify-content: space-between;
     flex-direction: row;
@@ -114,8 +117,8 @@
       background-size: cover;
       background-size: cover;
       background-position: center;
-      transition: width 0.4s ease-out, border-radius 0.3s ease-out;
-      &.section-4-image-1 {
+      transition: width 0.4s ease-out, border-radius 0.6s ease-out;
+      &.photo-image {
         position: absolute;
         top: 0;
         width: 70rem;
@@ -127,7 +130,7 @@
           border-bottom-left-radius: 0rem;
         }
       }
-      &.section-4-image-2 {
+      &.illustration-image {
         position: absolute;
         width: 50rem;
         left: 0;

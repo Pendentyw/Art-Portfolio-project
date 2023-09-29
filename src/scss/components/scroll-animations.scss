@@ -9,7 +9,7 @@
 .opacity-animation {
   opacity: 0;
   transition: opacity 0.5s ease-out;
-  transition-delay: 0.1s;
+  transition-delay: 0.2s;
 }
 
 .opacity-scroll-animation {
@@ -38,11 +38,40 @@
 
 .fade-up-animation {
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.3s ease-in, opacity 0.4s ease-in;
+  transform: translateY(30px);
+  transition: all 0.3s ease-in, opacity 0.3s ease-in;
 }
 
 .fade-up-scroll-animation {
   opacity: 1;
   transform: translateY(0);
+}
+
+.zoom-animation {
+  opacity: 0;
+  scale: 100%;
+  transition: scale 0.3s ease-out, opacity 0.1s ease-in;
+  transition-delay: 0.2s;
+}
+
+.zoom-scroll-animation {
+  opacity: 1;
+  scale: 104%;
+}
+
+.border-right-animation {
+  border-radius: 1rem;
+  transition-delay: 0.2s;
+}
+
+.border-right-scroll-animation {
+  border-top-right-radius: 40rem;
+  border-bottom-right-radius: 40rem;
+}
+
+// .width-animation {
+// }
+
+.width-scroll-animation {
+  width: 30rem !important;
 }
