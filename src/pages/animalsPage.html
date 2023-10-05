@@ -9,8 +9,18 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
     <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400;600;800&display=swap"
+      rel="stylesheet" />
+    <link
       rel="stylesheet"
-      href="../scss/dream-page-style.scss" />
+      href="../scss/animals-page.scss" />
     <title>Document</title>
     <script
       type="module"
@@ -31,17 +41,45 @@
       </div>
     </nav>
     <div class="sections-container">
-      <section class="about-animal-project">
-        <img
-          src="/src/img/hq-goat.jpg"
-          alt="" />
-        <div class="project-description">
-          <h4>Animals</h4>
-          <p>and humans</p>
+      <section class="about-animals">
+        <div class="container animals-container">
+          <div class="project-description opacity-animation">
+            <h4>Animals</h4>
+            <p>and humans</p>
+          </div>
+          <div class="eyes-container ease-in-left-animation">
+            <img
+              src="/src/img/hq-eye.jpg"
+              alt="eye drawing" />
+            <img
+              src="/src/img/hq-eye-2.jpg"
+              alt="eye drawing" />
+          </div>
         </div>
       </section>
 
-      <section></section>
+      <section class="animal-gallery fade-up-animation">
+        <div class="container">
+          <img
+            src="/src/img/hq-borbo.jpg"
+            alt="bird illustration" />
+          <img
+            src="/src/img/hq-goat2.jpg"
+            alt="goat illustration" />
+          <img
+            src="/src/img/hq-fish.jpg"
+            alt="fish illustration" />
+          <img
+            src="/src/img/hq-fur.jpg"
+            alt="fur illustration" />
+          <img
+            src="/src/img/hq-eyes.jpg"
+            alt="eyes illustration" />
+          <img
+            src="/src/img/hq-eye.jpg"
+            alt="eye illustration" />
+        </div>
+      </section>
     </div>
   </body>
 </html>

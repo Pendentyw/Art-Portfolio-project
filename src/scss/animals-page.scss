@@ -1,2 +1,42 @@
 @import 'document-style.scss';
 @import 'navigation.scss';
+@import '/src/scss/components/scroll-animations.scss';
+
+.about-animals {
+  .container {
+    justify-content: space-around;
+    img {
+      margin: 4rem;
+      transition: scale 0.4s ease-out;
+      &:first-child {
+        scale: 120%;
+        &:hover {
+          scale: 130%;
+        }
+      }
+      &:nth-child(2) {
+        &:hover {
+          scale: 120%;
+        }
+      }
+    }
+    .project-description {
+      margin-left: 12rem;
+    }
+  }
+}
+
+.animal-gallery {
+  flex-wrap: wrap;
+  overflow: hidden;
+  .container {
+    max-width: 80vw;
+    justify-content: center;
+    img {
+      width: 25vw;
+      // border-radius: 2rem;
+      object-fit: cover;
+      transition: scale 0.4s ease-in;
+    }
+  }
+}
