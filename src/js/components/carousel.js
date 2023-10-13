@@ -2,6 +2,8 @@ export const carousel = () => {
   const carouselContainer = document.querySelector('.carousel-container');
   const cards = document.querySelector('.cards');
 
+  if (!carouselContainer) return;
+
   let pressed = false;
   let startX;
   let x;

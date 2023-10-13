@@ -1,0 +1,26 @@
+.gallery-container {
+  display: flex;
+  align-self: start;
+  flex-direction: row;
+  .col {
+    img {
+      display: flex;
+
+      margin-right: 0.4em;
+      margin-left: 0.4em;
+      margin-bottom: 0.8em;
+      padding: 0.5rem;
+      width: 20vw;
+      min-height: 12vh;
+      max-height: 50vh;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 1.3rem;
+      transition: scale 0.3s ease-out;
+
+      &:hover {
+        scale: 105%;
+      }
+    }
+  }
+}

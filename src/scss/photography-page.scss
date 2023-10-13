@@ -1,3 +1,33 @@
 @import 'document-style.scss';
 @import 'navigation.scss';
 @import '/src/scss/components/scroll-animations.scss';
+@import '/src/scss/components/gallery.scss';
+
+.about-photos {
+  img {
+    border-bottom-left-radius: 20rem;
+  }
+}
+
+.photo-gallery {
+  position: relative;
+  justify-content: space-evenly;
+  align-items: start;
+  .preview-image-container {
+    position: sticky;
+    display: flex;
+    top: 10%;
+    width: 40vw;
+    justify-content: center;
+    .preview-image {
+      position: sticky;
+      top: 10%;
+      object-fit: cover;
+      margin-right: 0rem;
+      // background-image: url('/src/img/hq-goat.jpg');
+      max-width: 40vw;
+      height: 82vh;
+      border-radius: 1rem;
+    }
+  }
+}

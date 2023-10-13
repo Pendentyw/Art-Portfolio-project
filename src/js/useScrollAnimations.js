@@ -15,7 +15,7 @@ export const useScrollAnimations = () => {
   addScrollAnimation(rotateScrollAnimation, 'rotate-scroll-animation', true);
   addScrollAnimation(opacityScrollAnimation, 'opacity-scroll-animation', true);
   addScrollAnimation(easeInLeftScrollAnimation, 'ease-in-left-scroll-animation');
-  addScrollAnimation(fadeUpAnimation, 'fade-up-scroll-animation', true);
+  addScrollAnimation(fadeUpAnimation, 'fade-up-scroll-animation', false);
   addScrollAnimation(zoomAnimation, 'zoom-scroll-animation', true);
   addScrollAnimation(gifAndBorderAnimation, 'border-right-scroll-animation', true);
   addScrollAnimation(widthAnimation, 'width-scroll-animation', true);

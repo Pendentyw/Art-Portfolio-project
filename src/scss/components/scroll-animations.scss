@@ -17,12 +17,14 @@
 }
 
 .ease-in-left-animation {
+  opacity: 0;
   transform: translateX(-150);
-  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, opacity 0.2s ease-in;
   transition-delay: 0.1s;
 }
 
 .ease-in-left-scroll-animation {
+  opacity: 1;
   transform: translateX(0);
 }
 
@@ -39,7 +41,7 @@
 .fade-up-animation {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.3s ease-in, opacity 0.3s ease-in;
+  transition: all 0.3s ease-in, opacity 0.2s ease-in;
 }
 
 .fade-up-scroll-animation {

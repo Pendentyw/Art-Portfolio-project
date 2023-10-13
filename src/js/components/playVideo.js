@@ -1,4 +1,6 @@
 export const playVideoOnScroll = (video) => {
+  if (!video) return;
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -16,10 +18,13 @@ export const playVideoOnScroll = (video) => {
 };
 
 export const pauseVideoOnMouseEnter = (video) => {
-  video.addEventListener('mouseenter', () => {
-    video.pause();
-    video.addEventListener('mouseleave', () => {
+  if (!video) return;
+
+  video.addEventListener('click', () => {
+    if (video.paused) {
       video.play();
-    });
+    } else {
+      video.pause();
+    }
   });
 };
