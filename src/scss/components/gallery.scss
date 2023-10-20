@@ -2,6 +2,7 @@
   display: flex;
   align-self: start;
   flex-direction: row;
+  position: relative;
   .col {
     img {
       display: flex;
@@ -10,9 +11,9 @@
       margin-left: 0.4em;
       margin-bottom: 0.8em;
       padding: 0.5rem;
-      width: 20vw;
+      width: 12vw;
       min-height: 12vh;
-      max-height: 50vh;
+      max-height: 60vh;
       object-fit: cover;
       object-position: center;
       border-radius: 1.3rem;
