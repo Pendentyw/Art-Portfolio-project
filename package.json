@@ -3,10 +3,15 @@
   "source": "index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build --no-cache"
+    "build": "parcel build --no-cache --dist-dir=dist"
+  },
+  "staticFiles": {
+    "staticPath": "static",
+    "staticOutPath": "images"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.9.0",
-    "parcel": "^2.9.0"
+    "parcel": "^2.9.0",
+    "parcel-reporter-static-files-copy": "^1.5.3"
   }
 }
