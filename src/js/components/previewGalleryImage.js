@@ -4,13 +4,15 @@ export const previewGalleryImage = () => {
   const images = Array.from(galleryImages);
   console.log(images);
 
-  const changePreviewImageSrc = (imageSource) => {
+  const changePreviewImageAttributes = (imageSource, imageAlt) => {
     previewImage.src = imageSource;
+    previewImage.alt = imageAlt;
   };
-  const handleImageAttribute = (event) => {
+  const handleImageAttributes = (event) => {
     const imageSource = event.target.src;
-    changePreviewImageSrc(imageSource);
+    const imageAlt = event.target.alt;
+    changePreviewImageAttributes(imageSource, imageAlt);
   };
 
-  images.forEach((image) => image.addEventListener('click', handleImageAttribute));
+  images.forEach((image) => image.addEventListener('click', handleImageAttributes));
 };
