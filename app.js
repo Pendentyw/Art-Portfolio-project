@@ -1,9 +1,10 @@
 import slider from './src/js/components/carousel.js';
+import { addScrollAnimation } from './src/js/components/scrollAnimation.js';
 import { useScrollAnimations } from './src/js/useScrollAnimations.js';
 import { carousel } from './src/js/components/carousel.js';
 import { playVideoOnScroll, pauseVideoOnMouseEnter } from './src/js/components/playVideo.js';
-import { previewGalleryImage } from './src/js/components/previewGalleryImage.js';
 import { lazyLoad } from './src/js/components/lazyLoad.js';
+import { previewGalleryImage } from '/src/js/components/previewGalleryImage.js';
 
 //parcel
 
@@ -25,10 +26,10 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
-lazyLoad();
 previewGalleryImage();
-//use scroll animation function
 useScrollAnimations();
+lazyLoad();
+
 // use carousel
 
 carousel();

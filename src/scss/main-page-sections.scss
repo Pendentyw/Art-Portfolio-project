@@ -13,7 +13,7 @@
   justify-content: start;
   .dream-container {
     .project-description {
-      margin-right: 15rem;
+      margin-right: 7rem;
     }
     .dream-image {
       width: 40vw;
@@ -29,19 +29,55 @@
 }
 
 .fox {
-  background-size: cover;
-  background-position: center;
-
   .fox-images-container {
+    @include phone {
+      justify-content: space-evenly;
+    }
+    @include tablet-portrait {
+      justify-content: space-evenly;
+    }
+    @include desktop {
+      justify-content: space-between;
+    }
     .project-description {
-      margin-left: 10rem;
+      @include phone {
+        margin-left: 0;
+      }
+      @include tablet-portrait {
+        margin-left: 0;
+      }
+      @include desktop {
+        margin-left: 6rem;
+      }
     }
     .preview-image {
-      width: 12vw;
+      width: 14vw;
       height: 60rem;
       background-size: cover;
       background-position: center;
       transition: width 0.5s ease-in-out;
+      @include tablet-portrait {
+        width: 30vw;
+        height: 70vh;
+      }
+      @include tablet-landscape {
+        width: 27vw;
+        &:hover {
+          width: 40vw;
+        }
+      }
+      @include desktop {
+        width: 14vw;
+        &:hover {
+          width: 30vw;
+        }
+      }
+      @include large-desktop {
+        width: 18vw;
+        &:hover {
+          width: 50vw;
+        }
+      }
       &:hover {
         width: 20vw;
       }
@@ -54,10 +90,28 @@
         background-image: url('/src/img/hq-fox.jpg');
         background-position: 20%;
         border-radius: 5rem;
+        @include phone {
+          display: none;
+        }
+        @include tablet-portrait {
+          display: none;
+        }
+        @include desktop {
+          display: flex;
+        }
       }
       &.fox-preview-image-3 {
         background-image: url('/src//img/hq-plant.jpg');
         border-bottom-left-radius: 20rem;
+        @include phone {
+          display: none;
+        }
+        @include tablet-portrait {
+          display: none;
+        }
+        @include desktop {
+          display: flex;
+        }
       }
     }
   }
@@ -78,12 +132,25 @@
       background-position: center;
       transition: width 0.4s ease-in-out, border-radius 0.6s ease-out;
       &.animals-preview-image-1 {
-        width: 24vw;
         background-image: url('/src/img/hq-borbo.jpg');
         background-attachment: fixed;
         background-size: 20%;
         background-position: left;
-        border-radius: 40rem;
+
+        @include tablet-portrait {
+          width: 30vw;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 40rem;
+          border-top-right-radius: 40rem;
+        }
+        @include desktop {
+          width: 20vw;
+          border-top-left-radius: 40rem;
+          border-bottom-left-radius: 40rem;
+          border-bottom-right-radius: 40rem;
+          border-top-right-radius: 40rem;
+        }
         &:hover {
           border-radius: 4rem;
           border-top-right-radius: 50rem;
@@ -96,6 +163,15 @@
         border-top-right-radius: 50rem;
         border-bottom-right-radius: 50rem;
         width: 24vw;
+        @include phone {
+          display: none;
+        }
+        @include tablet-portrait {
+          display: none;
+        }
+        @include desktop {
+          display: block;
+        }
         &:hover {
           border-radius: 4rem;
         }
@@ -110,7 +186,7 @@
     justify-content: space-between;
     flex-direction: row;
     .photography-text {
-      margin-top: 24rem;
+      margin-top: 27rem;
     }
     .preview-image {
       height: 35rem;

@@ -40,6 +40,7 @@
     height: 100%;
     font-weight: 600;
     font-size: 1.5rem;
+
     a {
       text-decoration: none;
       color: rgb(83, 83, 83);
@@ -51,7 +52,7 @@
   }
   ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 20%;
     align-items: center;
@@ -59,5 +60,50 @@
   li {
     display: flex;
     flex-direction: row;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    .nav-text {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .nav {
+    .nav-text {
+      font-size: 16px;
+    }
+  }
+}
+@media (min-width: 769px) {
+  .nav {
+    .nav-text {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .nav {
+    .nav-text {
+      font-size: 20px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .nav {
+    .nav-text {
+      font-size: 22px;
+    }
+  }
+}
+@media (min-width: 1980px) {
+  .nav {
+    .nav-text {
+      font-size: 25px;
+    }
   }
 }
