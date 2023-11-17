@@ -4,9 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>My First Parcel App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400;600;800&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="./src/scss/style.scss" />
@@ -16,23 +19,29 @@
   </head>
   <body>
     <header class="header">
-      <div class="header-background">
+      <div class="background-container">
+        <div class="header-background forest fade-up-animation"></div>
+        <div class="header-background animal fade-up-animation"></div>
+        
       </div>
-      <div class="header-shape"></div>
       <div class="header-text">
-        <h1>PAULINA FALSZEWSKA</h1>
-        <p>Portfolio</p>
+        <h1 class="fade-up-animation">Paulina Falszewska</h1>
+        <p class="opacity-animation">Portfolio</p>
       </div>
+      
     </header>
 
     <nav class="nav">
       <div class="nav-bar">
         <div class="nav-text">
           <div class="HOME">
-            <a href="#">HOME</a>
+            <a href="/index.html">HOME</a>
           </div>
-         <a href="#section-dream">PORTFOLIO</a></li>
-      
+          <ul>
+            <li><a href="/index.html">PORTFOLIO</a></li>
+            <li><a href="/index.html">ABOUT ME</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
     <div class="sections-container">
@@ -42,7 +51,7 @@
 
       <section id="section-dream" class="dream">
         <!-- <a href="./src/pages/dreamPage.html"></a> -->
-        <div class="dream-container container">
+        <div class="dream-container ease-in-left-animation container">
           <a class="section-link" href="/src//pages/dreamPage.html">
             <div class="dream-image big-preview-image border-right-animation">
               <div class="image-shadow"></div>
@@ -63,13 +72,13 @@
           </div>
           <div class="preview-image fox-preview-image-1 "></div>
           <div class="preview-image fox-preview-image-2"></div>
-          <div class="preview-image fox-preview-image-3"></div>
+          <div class="preview-image fox-preview-image-3 width-animation"></div>
         </div>
         
       </section>
 
       <section class="animals"> 
-        <div class="animals-images-container container">
+        <div class="animals-images-container container ease-in-left-animation">
           <div class="preview-image  animals-preview-image-1"></div>
           <div class="preview-image  animals-preview-image-2"></div>
           <div class="project-description opacity-animation">
@@ -80,16 +89,20 @@
       </section>
 
       <section class="photo">
-        <div class="photo-container container">
-          <div class="project-description opacity-animation">
-            <h4>Illustrations</h4>
-            <p>More art</p>
+        <div class="works-container container fade-up-animation">
+          <div class="other-works-container">
+            <div class="project-description opacity-animation">
+              <h4>Illustrations</h4>
+              <p>More art</p>
+            </div>
+            <div class="preview-image illustration-image  "></div>
+
           </div>
-          <div class="preview-image photo-image"></div>
-          <div class="preview-image illustration-image"></div>
-          <div class="project-description opacity-animation photography-text">
+          <div class="other-works-container">
+            <div class="preview-image photo-image"></div>
+            <div class="project-description opacity-animation">
             <a class="section-link" href="/src//pages/photographyPage.html"><h4>Photography</h4></a>
-            <p>The art of light</p>
+            <p>The art of light</p></div>
           </div>
         </div>
       </section>

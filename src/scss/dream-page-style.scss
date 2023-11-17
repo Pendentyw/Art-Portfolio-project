@@ -3,7 +3,9 @@
 @import '/src/scss/components/scroll-animations.scss';
 
 .project-description {
-  margin: 10rem;
+  margin: 10rem 9rem;
+
+  max-width: 40%;
 }
 
 .books-about-project {
@@ -14,14 +16,28 @@
       border-top-left-radius: 2rem;
       width: 70rem;
       //scale: 130%;
+
+      @include desktop {
+        width: 35%;
+      }
+      @include large-desktop {
+        width: 42%;
+      }
     }
   }
 }
 
 .about-books {
   padding-top: 0;
+  padding-bottom: 15rem;
   .container {
-    padding: 5.5rem 0;
+    padding: 2.5rem 0;
+    @include tablet-portrait {
+      padding: 1rem 0;
+    }
+    @include desktop {
+      padding: 4rem 0;
+    }
   }
   .diagrams-container {
     justify-content: space-between;
@@ -30,23 +46,36 @@
       height: 60rem;
       background-image: url('/src/img/dream-page/hq-waves-transparent.png');
       border-top-right-radius: 40rem;
+      @include desktop {
+        width: 10%;
+      }
+      @include desktop {
+        width: 35%;
+      }
+      @include large-desktop {
+        width: 40%;
+      }
     }
   }
 
   .dreams-container {
-    justify-content: space-between;
+    justify-content: none;
     align-items: center;
     overflow: hidden;
 
-    .project-description {
-      margin-left: 20rem;
-    }
+    // .project-description {
+    // }
     .dream-book-background {
-      width: 55rem;
-      height: 55rem;
-      background-size: cover;
-      background-image: url('/src/img/dream-page/h1-kula.png');
+      position: absolute;
+      right: 2rem;
       transition: transform 1.5s ease-in;
+      width: 22rem;
+      @include tablet-portrait {
+        width: 33%;
+      }
+      @include desktop {
+        width: 35%;
+      }
       &:hover {
         transform: rotate(140deg);
       }
@@ -54,14 +83,28 @@
   }
 
   .psycho-container {
+    position: relative;
     justify-content: space-between;
+    .project-description {
+      margin-right: 6rem;
+    }
     .psycho-background {
-      width: 50rem;
-      height: 50rem;
-      background-image: url('/src/img/dream-page/hq-psycho-transparent.png');
-      background-size: cover;
-      background-position: center;
+      position: absolute;
+      top: 30%;
       border-top-right-radius: 40rem;
+      @include tablet-portrait {
+        width: 40%;
+      }
+      @include tablet-landscape {
+        width: 44%;
+      }
+
+      @include desktop {
+        width: 40%;
+      }
+      @include large-desktop {
+        width: 50rem;
+      }
     }
   }
 }
@@ -71,21 +114,12 @@
   margin-top: 10rem;
   position: relative;
 
-  .carousel-arrow {
-    position: absolute;
-    right: 15%;
-    z-index: 1000;
-    width: 50px;
-    height: 50px;
-    background-color: rgb(10, 21, 17);
-  }
-
   .carousel-container {
     width: 90%;
     height: 40rem;
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
 
@@ -102,8 +136,16 @@
 
         img {
           border-radius: 1rem;
-          width: 70rem;
           height: auto;
+          @include tablet-portrait {
+            width: 40rem;
+          }
+          @include desktop {
+            width: 50rem;
+          }
+          @include large-desktop {
+            width: 70rem;
+          }
         }
       }
     }

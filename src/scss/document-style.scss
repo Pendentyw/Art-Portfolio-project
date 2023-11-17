@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: 'Urbanist', sans-serif;
+  font-family: 'Cormorant Garamond', serif, 'Spectral', serif;
   background-image: url('/src/img/h1-grain-background.jpg');
   background-size: cover;
   background-attachment: fixed;
@@ -71,18 +71,19 @@ section {
     max-width: 60rem;
   }
   h4 {
-    padding-bottom: 2rem;
     @include phone {
       font-size: 2.1rem;
     }
 
     @include tablet-portrait {
+      padding-bottom: 1rem;
       font-size: 2.3rem;
     }
     @include tablet-landscape {
       font-size: 2.6rem;
     }
     @include desktop {
+      padding-bottom: 2rem;
       font-size: 3rem;
     }
     @include large-desktop {

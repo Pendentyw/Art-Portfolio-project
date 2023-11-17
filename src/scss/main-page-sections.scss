@@ -17,11 +17,12 @@
     }
     .dream-image {
       width: 40vw;
-      height: 50rem;
+      height: 48vh;
       background-image: url('/src/img/hq-wave.jpg');
       transition: all 0.9s ease-out;
       &:hover {
         width: 50vw;
+
         background-image: url('/src/movie/nocne-tiki-short-gif.gif');
       }
     }
@@ -51,7 +52,6 @@
       }
     }
     .preview-image {
-      width: 14vw;
       height: 60rem;
       background-size: cover;
       background-position: center;
@@ -67,13 +67,13 @@
         }
       }
       @include desktop {
-        width: 14vw;
+        width: 12vw;
         &:hover {
           width: 30vw;
         }
       }
       @include large-desktop {
-        width: 18vw;
+        width: 15vw;
         &:hover {
           width: 50vw;
         }
@@ -181,37 +181,39 @@
 }
 
 .photo {
-  .photo-container {
-    position: relative;
-    justify-content: space-between;
-    flex-direction: row;
-    .photography-text {
-      margin-top: 27rem;
-    }
+  position: relative;
+  justify-content: space-between;
+  flex-direction: row;
+
+  .works-container {
     .preview-image {
       height: 35rem;
       background-size: cover;
       background-size: cover;
       background-position: center;
       transition: width 0.4s ease-out, border-radius 0.6s ease-out;
-      &.photo-image {
-        position: absolute;
-        top: 0;
-        width: 40vw;
-        right: 0;
+    }
+    .other-works-container {
+      display: flex;
 
+      flex-direction: column;
+      .project-description {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+      }
+
+      .photo-image {
+        width: 40vw;
         background-image: url('/src/img/hq-leaf.jpg');
+        border-bottom-left-radius: 0rem;
         border-top-left-radius: 50rem;
-        border-bottom-left-radius: 50rem;
         &:hover {
-          border-bottom-left-radius: 0rem;
+          border-top-left-radius: 50rem;
+          border-bottom-left-radius: 50rem;
         }
       }
-      &.illustration-image {
-        position: absolute;
+      .illustration-image {
         width: 30vw;
-        left: 0;
-        margin-top: 50rem;
         background-image: url('/src/img/rysia.jpg');
         border-bottom-right-radius: 50rem;
         &:hover {
