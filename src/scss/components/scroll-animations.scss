@@ -2,7 +2,7 @@
   transition: transform 2s ease-out;
 }
 
-.rotate-scroll-animation {
+.rotate-animation-scroll {
   transform: rotate(-60deg);
 }
 
@@ -12,7 +12,7 @@
   transition-delay: 0.2s;
 }
 
-.opacity-scroll-animation {
+.opacity-animation-scroll {
   opacity: 1;
 }
 
@@ -23,7 +23,7 @@
   transition-delay: 0.1s;
 }
 
-.ease-in-left-scroll-animation {
+.ease-in-left-animation-scroll {
   opacity: 1;
   transform: translateX(0);
 }
@@ -34,7 +34,7 @@
   transition: transform 0.5s ease-out, opacity 0.2s ease-in;
   transition-delay: 0.1s;
 }
-.ease-in-right-scroll-animation {
+.ease-in-right-animation-scroll {
   opacity: 1;
   transform: translateX(0);
 }
@@ -44,7 +44,7 @@
   transition: border-radius 0.3s ease-out;
 }
 
-.border-radius-scroll-animation {
+.border-radius-animation-scroll {
   border-top-left-radius: 10rem;
   border-bottom-left-radius: 10rem;
 }
@@ -55,7 +55,18 @@
   transition: all 0.3s ease-in, opacity 0.2s ease-in;
 }
 
-.fade-up-scroll-animation {
+.fade-up-animation-scroll {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-down-animation {
+  opacity: 0;
+  transform: translateY(-120px);
+  transition: transform 0.3s ease-in, opacity 0.2s ease-in;
+}
+
+.fade-down-animation-scroll {
   opacity: 1;
   transform: translateY(0);
 }
@@ -67,7 +78,7 @@
   transition-delay: 0.2s;
 }
 
-.zoom-scroll-animation {
+.zoom-animation-scroll {
   opacity: 1;
   //scale: 104%;
 }
@@ -77,12 +88,12 @@
   transition-delay: 0.2s;
 }
 
-.border-right-scroll-animation {
+.border-right-animation-scroll {
   border-top-right-radius: 40rem;
   border-bottom-right-radius: 40rem;
 }
 
-.width-scroll-animation {
+.width-animation-scroll {
   @include desktop {
     width: 16vw !important;
   }
