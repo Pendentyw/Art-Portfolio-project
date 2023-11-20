@@ -1,6 +1,7 @@
 @import 'document-style.scss';
 @import 'navigation.scss';
 @import '/src/scss/components/scroll-animations.scss';
+@import '/src/scss/components/artworksPreview.scss';
 
 .project-description {
   margin: 6rem 2rem;
@@ -211,7 +212,7 @@
       transition: scale 0.3s ease-out;
       @include tablet-portrait {
         margin: 0.5rem;
-        height: 25rem;
+        height: 20rem;
       }
       @include desktop {
         margin: 2rem;

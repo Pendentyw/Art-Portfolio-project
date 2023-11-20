@@ -1,3 +1,5 @@
+@import '/src/scss/components/artworksPreview.scss';
+
 .section-link {
   text-decoration: none;
   color: rgb(38, 38, 38);
@@ -8,16 +10,47 @@
     height: 100%;
   }
 }
+.project-description {
+  @include phone {
+    // background-color: rgba(255, 255, 255, 0.359);
+    margin: 0;
+    padding: 2rem;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include tablet-portrait {
+      margin-right: 0;
+    }
+  }
+}
 
 .dream {
-  justify-content: start;
   .dream-container {
+    @include phone {
+      justify-content: center;
+    }
     .project-description {
-      margin-right: 7rem;
+      @include phone {
+        text-align: left;
+      }
+      @include tablet-portrait {
+        margin-left: 7rem !important;
+      }
     }
     .dream-image {
-      width: 40vw;
-      height: 48vh;
+      @include phone {
+        width: 30vw;
+        height: 48vh;
+      }
+      @include tablet-portrait {
+        width: 38vw;
+        height: 48vh;
+      }
+      @include large-desktop {
+        width: 43vw;
+      }
+
       background-image: url('/src/img/hq-wave.jpg');
       transition: all 0.9s ease-out;
       &:hover {
@@ -30,9 +63,12 @@
 }
 
 .fox {
+  @include phone {
+    padding-bottom: 0rem;
+  }
   .fox-images-container {
     @include phone {
-      justify-content: space-evenly;
+      justify-content: end;
     }
     @include tablet-portrait {
       justify-content: space-evenly;
@@ -42,6 +78,7 @@
     }
     .project-description {
       @include phone {
+        text-align: right;
         margin-left: 0;
       }
       @include tablet-portrait {
@@ -50,12 +87,19 @@
       @include desktop {
         margin-left: 6rem;
       }
+      @include large-desktop {
+        margin-left: 10rem;
+      }
     }
     .preview-image {
       height: 60rem;
       background-size: cover;
       background-position: center;
       transition: width 0.5s ease-in-out;
+      @include phone {
+        width: 70vw;
+        height: 60vh;
+      }
       @include tablet-portrait {
         width: 30vw;
         height: 70vh;
@@ -69,22 +113,24 @@
       @include desktop {
         width: 12vw;
         &:hover {
-          width: 30vw;
+          width: 17vw;
         }
       }
       @include large-desktop {
-        width: 15vw;
+        width: 13vw;
         &:hover {
-          width: 50vw;
+          width: 20vw;
         }
-      }
-      &:hover {
-        width: 20vw;
       }
 
       &.fox-preview-image-1 {
         background-image: url('/src/img/hq-kitsune.jpg');
         border-radius: 20rem;
+        @include phone {
+          border-radius: 0;
+          border-top-left-radius: 5rem;
+          border-bottom-left-radius: 5rem;
+        }
       }
       &.fox-preview-image-2 {
         background-image: url('/src/img/hq-fox.jpg');
@@ -119,23 +165,41 @@
 
 .animals {
   justify-content: start;
+  // @include phone {
+  //   padding-top: 0rem;
+  // }
+  .project-description {
+    text-align: left;
+  }
   .animals-images-container {
     justify-content: start;
     align-items: center;
-    .project-description {
-      margin-left: 6rem;
+    @include phone {
+      justify-content: start;
     }
     .preview-image {
-      margin-left: 4rem;
       height: 55rem;
       background-size: cover;
       background-position: center;
       transition: width 0.4s ease-in-out, border-radius 0.6s ease-out;
+      @include phone {
+        margin: 0;
+      }
+      @include tablet-portrait {
+        margin: 4rem;
+      }
       &.animals-preview-image-1 {
         background-image: url('/src/img/hq-borbo.jpg');
         background-attachment: fixed;
-        background-size: 20%;
+        background-size: 30%;
         background-position: left;
+        @include phone {
+          width: 30vw;
+          height: 25rem;
+          border-radius: 0;
+          border-top-right-radius: 4rem;
+          border-bottom-right-radius: 4rem;
+        }
 
         @include tablet-portrait {
           width: 30vw;
@@ -143,6 +207,11 @@
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 40rem;
           border-top-right-radius: 40rem;
+          &:hover {
+            border-radius: 4rem;
+            border-top-right-radius: 50rem;
+            border-bottom-right-radius: 50rem;
+          }
         }
         @include desktop {
           width: 20vw;
@@ -150,11 +219,6 @@
           border-bottom-left-radius: 40rem;
           border-bottom-right-radius: 40rem;
           border-top-right-radius: 40rem;
-        }
-        &:hover {
-          border-radius: 4rem;
-          border-top-right-radius: 50rem;
-          border-bottom-right-radius: 50rem;
         }
       }
       &.animals-preview-image-2 {
@@ -182,43 +246,65 @@
 
 .photo {
   position: relative;
-  justify-content: space-between;
-  flex-direction: row;
 
   .works-container {
+    justify-content: space-between;
+    @include phone {
+      justify-content: center;
+    }
     .preview-image {
       height: 35rem;
       background-size: cover;
       background-size: cover;
       background-position: center;
       transition: width 0.4s ease-out, border-radius 0.6s ease-out;
+      @include phone {
+        width: 70vw;
+        border-radius: 0;
+      }
     }
     .other-works-container {
       display: flex;
-
       flex-direction: column;
       .project-description {
-        padding-top: 3rem;
-        padding-bottom: 4rem;
+        @include phone {
+          width: 100%;
+        }
+        @include tablet-portrait {
+          padding-top: 3rem;
+          padding-bottom: 4rem;
+        }
       }
 
       .photo-image {
-        width: 40vw;
         background-image: url('/src/img/hq-leaf.jpg');
-        border-bottom-left-radius: 0rem;
-        border-top-left-radius: 50rem;
-        &:hover {
+        @include phone {
+          width: 60vw;
+          border-radius: 55rem;
+        }
+        @include tablet-portrait {
+          width: 40vw;
+          border-bottom-left-radius: 0rem;
           border-top-left-radius: 50rem;
-          border-bottom-left-radius: 50rem;
+          &:hover {
+            border-top-left-radius: 50rem;
+            border-bottom-left-radius: 50rem;
+          }
         }
       }
       .illustration-image {
-        width: 30vw;
         background-image: url('/src/img/rysia.jpg');
-        border-bottom-right-radius: 50rem;
-        &:hover {
-          border-top-left-radius: 50rem;
-          border-bottom-left-radius: 50rem;
+        @include phone {
+          width: 100vw;
+          height: 33vh;
+          margin-bottom: 4rem;
+        }
+        @include tablet-portrait {
+          width: 30vw;
+          &:hover {
+            border-top-left-radius: 50rem;
+            border-bottom-left-radius: 50rem;
+          }
         }
       }
     }

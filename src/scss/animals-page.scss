@@ -1,42 +1,62 @@
 @import 'document-style.scss';
 @import 'navigation.scss';
 @import '/src/scss/components/scroll-animations.scss';
+@import '/src/scss/components/artworksPreview.scss';
 
 .about-animals {
   .container {
     justify-content: space-around;
-    img {
-      margin: 4rem;
-      transition: scale 0.4s ease-out;
-      &:first-child {
-        scale: 120%;
-        &:hover {
-          scale: 130%;
-        }
+    .eyes-container {
+      @include tablet-portrait {
+        width: 33%;
       }
-      &:nth-child(2) {
-        &:hover {
-          scale: 120%;
-        }
+      @include desktop {
+        width: 36%;
       }
-    }
-    .project-description {
-      margin-left: 12rem;
-    }
-  }
-}
+      @include large-desktop {
+        width: 28%;
+      }
+      img {
+        margin: 4rem;
+        transition: scale 0.4s ease-out;
+        @include tablet-portrait {
+          margin: 0;
+        }
+        @include desktop {
+          margin: 2rem;
+        }
+        &:first-child {
+          width: 100%;
+          // @include tablet-portrait {
+          //   width: 100vw;
+          // }
 
-.animal-gallery {
-  flex-wrap: wrap;
-  overflow: hidden;
-  .container {
-    max-width: 80vw;
-    justify-content: center;
-    img {
-      width: 25vw;
-      // border-radius: 2rem;
-      object-fit: cover;
-      transition: scale 0.4s ease-in;
+          // @include desktop {
+
+          // }
+          // @include large-desktop {
+          //   scale: 130%;
+          // }
+          &:hover {
+            scale: 100%;
+          }
+        }
+        &:nth-child(2) {
+          @include tablet-portrait {
+            width: 100%;
+          }
+
+          @include desktop {
+          }
+          &:hover {
+            scale: 120%;
+          }
+        }
+      }
+    }
+
+    .project-description {
+      margin-left: 8rem;
     }
   }
 }

@@ -1,6 +1,5 @@
 export const lazyLoad = () => {
   const images = document.querySelectorAll('.image-to-load');
-  console.log(images);
 
   const imagesArray = Array.from(images);
 
@@ -20,7 +19,6 @@ export const lazyLoad = () => {
     });
   });
   imagesArray.forEach((lazyImage) => {
-    console.log(lazyImage);
     imagesObserver.observe(lazyImage);
   });
 };

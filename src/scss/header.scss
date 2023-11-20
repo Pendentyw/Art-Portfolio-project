@@ -9,55 +9,56 @@
   text-align: center;
   flex-wrap: wrap;
 
-  .background-container {
-    margin-top: 20vh;
-    margin-left: 14rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 39%;
-    height: 80%;
-    .header-background {
-      width: 50%;
-      background-position: center;
-      background-attachment: fixed;
-      background-size: 10%;
+  // .background-container {
+  //   margin-top: 20vh;
+  //   margin-left: 14rem;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: space-between;
+  //   align-items: flex-start;
+  //   width: 39%;
+  //   height: 80%;
+  //   .header-background {
+  //     width: 50%;
+  //     background-position: center;
+  //     background-attachment: fixed;
+  //     background-size: 10%;
 
-      &.forest {
-        height: 90%;
-        margin-right: -100rem;
-        width: 40%;
-        border-radius: 13rem;
-        background-size: cover;
-        background-image: url('/src/img/hq-bambo-vertical.jpg');
-      }
-      &.animal {
-        height: 44%;
-        width: 46%;
-        border-top-right-radius: 13rem;
-        border-bottom-right-radius: 13rem;
-        background-size: contain;
-        background-image: url('/src/img/hq-goat2.jpg');
-      }
-    }
-  }
+  //     &.forest {
+  //       height: 90%;
+  //       margin-right: -100rem;
+  //       width: 40%;
+  //       border-radius: 13rem;
+  //       background-size: cover;
+  //       background-image: url('/src/img/hq-bambo-vertical.jpg');
+  //     }
+  //     &.animal {
+  //       height: 44%;
+  //       width: 46%;
+  //       border-top-right-radius: 13rem;
+  //       border-bottom-right-radius: 13rem;
+  //       background-size: contain;
+  //       background-image: url('/src/img/hq-goat2.jpg');
+  //     }
+  //   }
+  // }
 
   .header-text {
-    width: 40%;
-    height: 95%;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    background-image: url('/src/img/hq-bamboo.jpg');
     background-position: center;
     background-size: cover;
-    border-bottom-left-radius: 30rem;
+    // border-bottom-left-radius: 30rem;
     h1 {
-      text-align: end;
+      text-align: center;
       max-width: 40rem;
       font-weight: 400;
-      color: rgb(38, 36, 36);
+      color: rgb(240, 238, 238);
       @include phone {
         font-size: 2rem;
       }
@@ -73,7 +74,7 @@
     }
     p {
       text-align: end;
-      color: rgb(23, 23, 23);
+      color: rgb(241, 240, 240);
       @include phone {
         font-size: 1.4rem;
       }
