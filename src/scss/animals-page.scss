@@ -4,11 +4,21 @@
 @import '/src/scss/components/artworksPreview.scss';
 
 .about-animals {
+  @include phone {
+    padding-top: 8rem;
+  }
   .container {
+    overflow-x: hidden;
     justify-content: space-around;
+    @include phone {
+      flex-direction: column-reverse;
+    }
     .eyes-container {
+      @include phone {
+        width: 77vw;
+      }
       @include tablet-portrait {
-        width: 33%;
+        width: 44vw;
       }
       @include desktop {
         width: 36%;
@@ -19,43 +29,46 @@
       img {
         margin: 4rem;
         transition: scale 0.4s ease-out;
+        width: 100%;
+        @include phone {
+          margin: 0;
+        }
         @include tablet-portrait {
           margin: 0;
         }
         @include desktop {
           margin: 2rem;
         }
-        &:first-child {
-          width: 100%;
-          // @include tablet-portrait {
-          //   width: 100vw;
-          // }
+        // &:first-child {
+        // @include tablet-portrait {
+        //   width: 100vw;
+        // }
 
-          // @include desktop {
+        // @include desktop {
 
-          // }
-          // @include large-desktop {
-          //   scale: 130%;
-          // }
-          &:hover {
-            scale: 100%;
-          }
-        }
-        &:nth-child(2) {
-          @include tablet-portrait {
-            width: 100%;
-          }
+        // }
+        // @include large-desktop {
+        //   scale: 130%;
+        // }
+        // }
+        // &:nth-child(2) {
+        //   @include tablet-portrait {
+        //     width: 100%;
+        //   }
 
-          @include desktop {
-          }
-          &:hover {
-            scale: 120%;
-          }
-        }
+        //   @include desktop {
+        //   }
+        //   &:hover {
+        //     scale: 120%;
+        //   }
+        // }
       }
     }
 
     .project-description {
+      @include phone {
+        margin-left: 0;
+      }
       margin-left: 8rem;
     }
   }

@@ -3,10 +3,7 @@
   align-self: start;
   flex-direction: row;
   position: relative;
-
-  @include desktop {
-    flex-direction: row;
-  }
+  justify-content: space-around;
   .col {
     img {
       display: flex;
@@ -20,6 +17,11 @@
       object-position: center;
       border-radius: 1.3rem;
       transition: scale 0.3s ease-out;
+      @include phone {
+        margin: 0;
+        padding: 0.3rem;
+        width: 30vw;
+      }
       @include tablet-portrait {
         width: 25vw;
       }

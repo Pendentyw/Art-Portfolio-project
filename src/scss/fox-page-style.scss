@@ -4,20 +4,34 @@
 @import '/src/scss/components/artworksPreview.scss';
 
 .about-project {
+  justify-content: start;
   flex-wrap: wrap;
   overflow: hidden;
+  @include phone {
+    padding-top: 8rem;
+  }
   @include tablet-portrait {
     padding-top: 4rem;
   }
   @include desktop {
     padding-top: 8rem;
   }
+  @include large-desktop {
+    padding-top: 2rem;
+  }
   .container {
     justify-content: space-around;
+    @include phone {
+      justify-content: start;
+      margin-left: 2rem;
+    }
     img {
       width: 10%;
       border-bottom-right-radius: 10rem;
       border-top-left-radius: 10rem;
+      @include phone {
+        width: 90%;
+      }
       @include tablet-portrait {
         width: 53%;
       }
@@ -33,9 +47,16 @@
   flex-wrap: wrap;
   position: relative;
   .project-description {
+    @include phone {
+      margin-left: 2rem;
+    }
     img {
       padding-top: 6rem;
       width: 25vw;
+      @include phone {
+        padding-top: 2rem;
+        width: 50vw;
+      }
     }
   }
 

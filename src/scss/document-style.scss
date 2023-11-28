@@ -10,19 +10,20 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
   // scroll-padding-top: 2rem;
-  scrollbar-gutter: stable;
 }
 
 body {
   overflow-y: scroll;
-  font-family: 'Cormorant Garamond', serif, 'Spectral', serif;
+  // font-family: 'Cormorant Garamond', serif, 'Spectral', serif;
+  font-family: 'Frank Ruhl Libre', serif;
+
+  // font-family: 'Lato', sans-serif;
   background-image: url('/src/img/h1-grain-background.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
 
 section {
-  padding: 14rem 0;
   width: 100vw;
   max-width: 100%;
   // scroll-snap-align: start;
@@ -32,8 +33,9 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
   @include phone {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
   @include tablet-portrait {
     padding: 5rem 0;
@@ -88,7 +90,7 @@ section {
       font-size: 3rem;
     }
     @include large-desktop {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
   }
   p {
