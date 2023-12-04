@@ -5,6 +5,8 @@ import { carousel } from './src/js/components/carousel.js';
 import { playVideoOnScroll, pauseVideoOnMouseEnter } from './src/js/components/playVideo.js';
 import { lazyLoad } from './src/js/components/lazyLoad.js';
 import { previewGalleryImage } from '/src/js/components/previewGalleryImage.js';
+import { dropdown } from './src/js/components/dropdown.js';
+import { navbarAnimation } from './src/js/components/navbarAnimation.js';
 
 //parcel
 
@@ -15,17 +17,8 @@ if (module.hot) {
 
 //hide navigation on scrolling down
 
-let prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  const currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector('nav').classList.remove('nav-animation');
-  } else {
-    document.querySelector('nav').classList.add('nav-animation');
-  }
-  prevScrollpos = currentScrollPos;
-};
-
+navbarAnimation();
+dropdown();
 previewGalleryImage();
 useScrollAnimations();
 lazyLoad();

@@ -1,3 +1,5 @@
+@import '/src/scss/components/navbar-dropdown.scss';
+@import 'src/scss/components/action-animations.scss';
 .nav-animation {
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -5,10 +7,18 @@
 }
 
 .nav-animation-reverse {
-  animation-duration: 1s;
+  animation-duration: 0.4s;
   animation-fill-mode: forwards;
-  animation-direction: reverse;
-  animation-name: nav-animation;
+  animation-name: nav-show-animation;
+}
+
+@keyframes nav-show-animation {
+  from {
+    top: -20rem;
+  }
+  to {
+    top: 0;
+  }
 }
 
 @keyframes nav-animation {
@@ -16,7 +26,7 @@
     top: 0;
   }
   to {
-    top: -8rem;
+    top: -20rem;
   }
 }
 
@@ -69,16 +79,16 @@
       font-size: 23px;
     }
 
-    .burger-icon {
-      padding: 1rem;
-      @include tablet-portrait {
-        width: 70px;
-        height: 70px;
-      }
-      @include desktop {
-        display: none;
-      }
-    }
+    // .burger-icon {
+    //   padding: 1rem;
+    //   @include tablet-portrait {
+    //     width: 70px;
+    //     height: 70px;
+    //   }
+    //   @include desktop {
+    //     display: none;
+    //   }
+    // }
 
     a {
       padding: 1rem;
@@ -90,7 +100,7 @@
       }
     }
   }
-  ul {
+  .desktop-links {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

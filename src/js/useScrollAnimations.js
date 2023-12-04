@@ -6,7 +6,7 @@ export const useScrollAnimations = () => {
     ['opacity', true],
     ['ease-in-left'],
     ['fade-up'],
-    ['fade-down'],
+    ['fade-down', true],
     ['border-radius', true],
     ['zoom', true],
     ['border-right', true],
