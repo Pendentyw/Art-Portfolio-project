@@ -73,7 +73,7 @@ section {
   @include large-desktop {
     max-width: 60rem;
   }
-  h4 {
+  h2 {
     @include phone {
       font-size: 1.8rem;
     }

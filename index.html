@@ -30,7 +30,7 @@
       src="app.js"></script>
   </head>
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <div class="background-container">
         <div class="header-background forest fade-up-animation"></div>
         <div class="header-background animal fade-up-animation"></div>
@@ -41,7 +41,7 @@
         <p class="opacity-animation">Portfolio</p>
       </div>
       
-    </header>
+    </header> -->
 
     <nav class="nav">
       <div class="nav-bar">
@@ -63,23 +63,83 @@
           <div class="dropdown default">
              <ul>
             <li><a href="/index.html/#section-dream">Portfolio</a></li>
-            <li><a href="/index.html">About me</a></li>
+            <li><a href="/src//pages/aboutMePage.html">About me</a></li>
           </ul>
           </div>
             </div>
           <ul class="desktop-links">
             <li><a href="/index.html/#section-dream">Portfolio</a></li>
-            <li><a href="/index.html">About me</a></li>
+            <li><a href="/src//pages/aboutMePage.html">About me</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="sections-container">
+
+      <section class="welcome-section">
+        <div class="container">
+          <div class="project-description opacity-animation">
+            <h1>Welcome!</h1>
+            <h2>I'm Paulina Falszewska</h2>
+            <p>
+              I've been drawing and painting since my
+              childhood. I love mixing traditional techniques with digital art. I'd like to show you my works and passion. Enjoy!
+            </p>
+          </div>
+          <div class="welcome-image ease-in-right-animation">
+            <img
+              src="/src/img/about-me/gasagsg.jpg"
+              alt="Paulina Falszewska autoportrait" />
+          </div>
+        </div>
+      </section>
+
+      <section class="about-website">
+        <div class="container ease-in-left-animation">
+          <div class="website-images">
+            <img
+              src="/src/img/about-me/ink.jpg"
+              alt="placeholder" />
+          </div>
+          <div class="project-description opacity-animation">
+            <h2>More about website</h2>
+            <p>
+              I made this website with tools like HTML, CSS and JavaScript, mostly to practice web
+              design and developing skills. It took me a while to decide about style and whole
+              concept. My main aim was to make it minimalistic and a bit unconventional.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="about-works">
+        <div class="container">
+          <div class="project-description opacity-animation">
+            <h2>Everything starts with sketching</h2>
+            <p>
+              All my artworks, except photography, are based on sketches. Next I choose proper technique to match the theme. Works below are illustrations, which I made using ink, pencils, Photoshop, Illustrator and textures. In addition I included separate page about photography
+            </p>
+          </div>
+          <div class="website-images">
+            <img class="circle-border-animation"
+              src="/src/img/about-me/sketch.jpg"
+              alt="Digital sketch of two people laying on sofa" />
+          </div>
+        </div>
+      </section>
+      
       <!-- <section id="theme-section">
         <h1>Thematic artworks</h1>
       </section> -->
 
-     
+     <!-- <section id="about-me" class="about">
+      <div class="container">
+        <div class="project-description">
+          <h4>Hey I'm Paulina</h4>
+          <p> I'm glad to see you there. This is my portfolio webside, which I made myself to practice web design and show you my works. You can find there some illustrations and photos.</p>
+        </div>
+        
+      </div>
+     </section> -->
 
       <section id="section-dream" class="dream">
         <!-- <a href="./src/pages/dreamPage.html"></a> -->
@@ -90,16 +150,16 @@
             </div>
           </a>
           <div class="project-description opacity-animation">
-            <a class="section-link" href="./src/pages/dreamPage.html"><h4>Dream waves</h4></a>
+            <a class="section-link" href="./src/pages/dreamPage.html"><h2>Dream waves</h2></a>
             <p>The essence of dreams. This cycle is based on my dreaming experience etc</p>
           </div>
         </div>
       </section>
 
       <section class="fox">
-        <div class="fox-images-container container">
+        <div class="fox-images-container container ease-in-left-animation">
           <div class="project-description opacity-animation">
-            <a class="section-link" href="/src//pages/foxPage.html"><h4>Fox Tail</h4></a>
+            <a class="section-link" href="/src//pages/foxPage.html"><h2>Fox Tail</h2></a>
             <p>The red fox and it's 1000 years life span</p>
           </div>
           <div class="preview-image fox-preview-image-1 "></div>
@@ -114,7 +174,7 @@
           <div class="preview-image  animals-preview-image-1"></div>
           <div class="preview-image  animals-preview-image-2"></div>
           <div class="project-description opacity-animation">
-            <a class="section-link" href="/src//pages/animalsPage.html"><h4>From Animals</h4></a>
+            <a class="section-link" href="/src//pages/animalsPage.html"><h2>From Animals</h2></a>
             <p>Animals-human hybrids</p>
           </div>
         </div>
@@ -125,7 +185,7 @@
           <div class="other-works-container">
             <div class="project-description opacity-animation">
               <a class="section-link" href="/src//pages/photographyPage.html">
-                <h4>Illustrations</h4>
+                <h2>Illustrations</h2>
               </a>
               <p>More art</p>
             </div>
@@ -135,7 +195,7 @@
           <div class="other-works-container">
             <div class="preview-image photo-image"></div>
             <div class="project-description opacity-animation">
-            <a class="section-link" href="/src//pages/photographyPage.html"><h4>Photography</h4></a>
+            <a class="section-link" href="/src//pages/photographyPage.html"><h2>Photography</h2></a>
             <p>The art of light</p></div>
           </div>
         </div>

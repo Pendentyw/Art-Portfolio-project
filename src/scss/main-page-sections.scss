@@ -1,4 +1,5 @@
 @import '/src/scss/components/artworksPreview.scss';
+@import '/src/scss/about-me-page.scss';
 
 .section-link {
   text-decoration: none;
@@ -22,6 +23,13 @@
     @include tablet-portrait {
       margin-right: 0;
     }
+  }
+}
+
+.about-me {
+  padding-top: 0rem;
+  .container {
+    display: flex;
   }
 }
 

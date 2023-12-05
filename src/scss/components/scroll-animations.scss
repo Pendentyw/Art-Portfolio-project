@@ -49,6 +49,14 @@
   border-bottom-left-radius: 10rem;
 }
 
+.circle-border-animation {
+  border-radius: 2rem;
+}
+
+.circle-border-animation-scroll {
+  border-radius: 25rem;
+}
+
 .fade-up-animation {
   opacity: 0;
   transform: translateY(120px);
