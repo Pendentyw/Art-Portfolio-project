@@ -1,5 +1,4 @@
 @import '/src/scss/components/artworksPreview.scss';
-@import '/src/scss/about-me-page.scss';
 
 .section-link {
   text-decoration: none;
@@ -11,6 +10,7 @@
     height: 100%;
   }
 }
+
 .project-description {
   @include phone {
     // background-color: rgba(255, 255, 255, 0.359);
@@ -26,10 +26,156 @@
   }
 }
 
-.about-me {
-  padding-top: 0rem;
+.welcome-section {
+  @include desktop {
+    padding-top: 2rem;
+  }
+
   .container {
     display: flex;
+    // justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+    @include phone {
+      justify-content: center;
+    }
+    @include desktop {
+      justify-content: space-around;
+    }
+
+    .project-description {
+      @include phone {
+        position: absolute;
+        z-index: 1;
+        color: white;
+        text-align: center;
+      }
+      @include tablet-portrait {
+        max-width: 25rem;
+      }
+      @include desktop {
+        max-width: 40rem;
+      }
+      @include large-desktop {
+        min-width: 60rem;
+      }
+    }
+    .welcome-image {
+      img {
+        border-bottom-left-radius: 10rem;
+        border-bottom-right-radius: 10rem;
+        background-color: red;
+        object-fit: cover;
+        width: 20rem;
+        height: 70vh;
+        @include phone {
+          overflow: hidden;
+          width: 100%;
+          height: 100vh;
+          border-radius: 0;
+          filter: brightness(50%);
+        }
+        @include tablet-landscape {
+          width: 26rem;
+          height: 78vh;
+        }
+        @include desktop {
+          width: 40rem;
+          height: 100%;
+          border-bottom-right-radius: 0;
+        }
+
+        @include large-desktop {
+          width: 52rem;
+        }
+      }
+    }
+  }
+}
+
+.about-website {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .project-description {
+      @include phone {
+        text-align: right;
+      }
+      @include tablet-landscape {
+        margin-right: 3rem;
+      }
+
+      @include desktop {
+        margin-right: 10rem;
+      }
+    }
+    .website-images {
+      img {
+        border-top-right-radius: 15rem;
+        border-bottom-right-radius: 15rem;
+        object-fit: cover;
+        width: 20rem;
+        @include phone {
+          width: 8rem;
+          height: 30vh;
+        }
+        @include tablet-landscape {
+          width: 24rem;
+          height: 22rem;
+        }
+        @include desktop {
+          width: 30rem;
+          height: 30rem;
+        }
+
+        @include large-desktop {
+          width: 70rem;
+        }
+      }
+    }
+  }
+}
+
+.about-works {
+  @include tablet-landscape {
+    margin-bottom: 5rem;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    @include phone {
+      justify-content: end;
+    }
+    .project-description {
+      text-align: right;
+    }
+    .website-images {
+      img {
+        width: 20rem;
+        transition: 0.6s border-radius ease-in, 0.3s scale ease-out;
+        object-fit: cover;
+        @include phone {
+          width: 8rem;
+          height: 30rem;
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+        }
+        @include tablet-landscape {
+          width: 22rem;
+          height: 40rem;
+          &:hover {
+            scale: 103%;
+          }
+        }
+        @include desktop {
+          width: 24rem;
+        }
+
+        @include large-desktop {
+          width: 50rem;
+        }
+      }
+    }
   }
 }
 
@@ -176,13 +322,16 @@
   // @include phone {
   //   padding-top: 0rem;
   // }
-  .project-description {
-    text-align: left;
-  }
+
   .animals-images-container {
-    justify-content: start;
     align-items: center;
     @include phone {
+      justify-content: start;
+    }
+    @include tablet-portrait {
+      justify-content: space-evenly;
+    }
+    @include desktop {
       justify-content: start;
     }
     .preview-image {
@@ -199,7 +348,7 @@
       &.animals-preview-image-1 {
         background-image: url('/src/img/hq-borbo.jpg');
         background-attachment: fixed;
-        background-size: 30%;
+        background-size: 40%;
         background-position: left;
         @include phone {
           width: 30vw;
@@ -220,13 +369,21 @@
             border-top-right-radius: 50rem;
             border-bottom-right-radius: 50rem;
           }
+          @include tablet-landscape {
+            height: 46rem;
+          }
         }
         @include desktop {
-          width: 20vw;
+          width: 10vw;
+          height: 40rem;
           border-top-left-radius: 40rem;
           border-bottom-left-radius: 40rem;
           border-bottom-right-radius: 40rem;
           border-top-right-radius: 40rem;
+        }
+        @include large-desktop {
+          width: 36rem;
+          height: 60rem;
         }
       }
       &.animals-preview-image-2 {
@@ -243,9 +400,14 @@
         }
         @include desktop {
           display: block;
+          height: 40rem;
         }
         &:hover {
           border-radius: 4rem;
+        }
+        @include large-desktop {
+          width: 40rem;
+          height: 60rem;
         }
       }
     }
@@ -253,10 +415,8 @@
 }
 
 .photo {
-  position: relative;
-
   .works-container {
-    justify-content: space-between;
+    justify-content: space-evenly;
     @include phone {
       justify-content: center;
     }
@@ -271,54 +431,28 @@
         border-radius: 0;
       }
     }
-    .other-works-container {
-      display: flex;
-      flex-direction: column;
-      @include phone {
-        align-items: center;
-      }
-      .project-description {
-        @include phone {
-          width: 100%;
-        }
-        @include tablet-portrait {
-          padding-top: 3rem;
-          padding-bottom: 4rem;
-        }
-      }
+  }
+  .project-description {
+    @include phone {
+      width: 100%;
+    }
+  }
 
-      .photo-image {
-        background-image: url('/src/img/hq-leaf.jpg');
-        @include phone {
-          width: 60vw;
-          border-radius: 55rem;
-        }
-        @include tablet-portrait {
-          width: 40vw;
-          border-bottom-left-radius: 0rem;
-          border-top-left-radius: 50rem;
-          &:hover {
-            border-top-left-radius: 50rem;
-            border-bottom-left-radius: 50rem;
-          }
-        }
-      }
-      .illustration-image {
-        background-image: url('/src/img/rysia.jpg');
-        @include phone {
-          width: 100vw;
-          height: 33vh;
-          margin-bottom: 4rem;
-          border-bottom-left-radius: 20rem;
-          border-bottom-right-radius: 20rem;
-        }
-        @include tablet-portrait {
-          width: 30vw;
-          &:hover {
-            border-top-left-radius: 50rem;
-            border-bottom-left-radius: 50rem;
-          }
-        }
+  .photo-image {
+    background-image: url('/src/img/hq-leaf.jpg');
+    @include phone {
+      width: 60vw;
+      border-radius: 55rem;
+    }
+    @include tablet-portrait {
+      width: 50vw;
+      height: 45vh;
+      border-radius: 50rem;
+      border-bottom-left-radius: 0rem;
+      border-top-left-radius: 50rem;
+      &:hover {
+        border-top-left-radius: 50rem;
+        border-bottom-left-radius: 50rem;
       }
     }
   }
