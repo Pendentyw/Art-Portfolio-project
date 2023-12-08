@@ -26,6 +26,7 @@ body {
 h1 {
   padding-bottom: 2rem;
   font-size: 2.4rem;
+  color: rgb(38, 38, 38);
 
   @include phone {
     font-size: 2.8rem;
@@ -40,6 +41,10 @@ h1 {
 
 h2 {
   font-size: 3rem;
+  color: rgb(38, 38, 38);
+  // &:hover {
+  //   color: ;
+  // }
 }
 
 section {
@@ -130,9 +135,11 @@ section {
     }
   }
   a {
-    transition: color 0.3s ease-out;
-    &:hover {
-      color: rgb(201, 47, 47);
+    h2 {
+      transition: color 0.3s ease-out;
+      &:hover {
+        color: rgb(201, 47, 47);
+      }
     }
   }
 }

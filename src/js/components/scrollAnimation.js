@@ -9,7 +9,7 @@ export const addScrollAnimation = (selector, animation, removeAnimation) => {
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.1 }
   );
   //
   for (let i = 0; i < selector.length; i++) {

@@ -46,6 +46,10 @@
   overflow: hidden;
   flex-wrap: wrap;
   position: relative;
+  padding: 2rem;
+  @include desktop {
+    padding: 8rem;
+  }
   .project-description {
     @include phone {
       margin-left: 2rem;

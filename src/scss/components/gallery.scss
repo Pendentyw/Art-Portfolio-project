@@ -3,7 +3,9 @@
   align-self: start;
   flex-direction: row;
   position: relative;
-  justify-content: space-around;
+  @include desktop {
+    margin-right: 2rem;
+  }
   .col {
     img {
       display: flex;

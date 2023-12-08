@@ -2,7 +2,6 @@
 
 .section-link {
   text-decoration: none;
-  color: rgb(38, 38, 38);
   .big-preview-image {
     background-size: cover;
     background-position: center;
@@ -44,6 +43,16 @@
     }
 
     .project-description {
+      h2 {
+        @include phone {
+          color: white;
+        }
+      }
+      h1 {
+        @include phone {
+          color: white;
+        }
+      }
       @include phone {
         position: absolute;
         z-index: 1;
@@ -64,7 +73,6 @@
       img {
         border-bottom-left-radius: 10rem;
         border-bottom-right-radius: 10rem;
-        background-color: red;
         object-fit: cover;
         width: 20rem;
         height: 70vh;
@@ -93,49 +101,6 @@
   }
 }
 
-.about-website {
-  .container {
-    display: flex;
-    justify-content: space-between;
-    .project-description {
-      @include phone {
-        text-align: right;
-      }
-      @include tablet-landscape {
-        margin-right: 3rem;
-      }
-
-      @include desktop {
-        margin-right: 10rem;
-      }
-    }
-    .website-images {
-      img {
-        border-top-right-radius: 15rem;
-        border-bottom-right-radius: 15rem;
-        object-fit: cover;
-        width: 20rem;
-        @include phone {
-          width: 8rem;
-          height: 30vh;
-        }
-        @include tablet-landscape {
-          width: 24rem;
-          height: 22rem;
-        }
-        @include desktop {
-          width: 30rem;
-          height: 30rem;
-        }
-
-        @include large-desktop {
-          width: 70rem;
-        }
-      }
-    }
-  }
-}
-
 .about-works {
   @include tablet-landscape {
     margin-bottom: 5rem;
@@ -149,7 +114,7 @@
     .project-description {
       text-align: right;
     }
-    .website-images {
+    .sketch-image {
       img {
         width: 20rem;
         transition: 0.6s border-radius ease-in, 0.3s scale ease-out;
@@ -163,9 +128,6 @@
         @include tablet-landscape {
           width: 22rem;
           height: 40rem;
-          &:hover {
-            scale: 103%;
-          }
         }
         @include desktop {
           width: 24rem;
@@ -173,6 +135,7 @@
 
         @include large-desktop {
           width: 50rem;
+          height: 50rem;
         }
       }
     }
@@ -236,7 +199,7 @@
         margin-left: 0;
       }
       @include tablet-portrait {
-        margin-left: 0;
+        margin-left: 3rem;
       }
       @include desktop {
         margin-left: 6rem;
@@ -360,6 +323,7 @@
 
         @include tablet-portrait {
           width: 30vw;
+          height: 44rem;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 40rem;
