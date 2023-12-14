@@ -384,39 +384,39 @@
     @include phone {
       justify-content: center;
     }
-    .preview-image {
-      height: 35rem;
-      background-size: cover;
-      background-size: cover;
-      background-position: center;
-      transition: width 0.4s ease-out, border-radius 0.6s ease-out;
-      @include phone {
-        width: 70vw;
-        border-radius: 0;
-      }
-    }
   }
   .project-description {
+    text-align: right;
     @include phone {
       width: 100%;
     }
   }
-
-  .photo-image {
-    background-image: url('/src/img/hq-leaf.jpg');
-    @include phone {
-      width: 60vw;
-      border-radius: 55rem;
-    }
-    @include tablet-portrait {
-      width: 50vw;
-      height: 45vh;
-      border-radius: 50rem;
-      border-bottom-left-radius: 0rem;
-      border-top-left-radius: 50rem;
-      &:hover {
-        border-top-left-radius: 50rem;
-        border-bottom-left-radius: 50rem;
+  .photo-images-container {
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    .photo-image {
+      background-position: center;
+      background-size: cover;
+      align-items: start;
+      margin: 2rem;
+      width: 16vw;
+      &.photo-image-1 {
+        height: 42vw;
+        border-radius: 20rem;
+        background-image: url('/static/feathers.jpg');
+      }
+      &.photo-image-2 {
+        height: 22vw;
+        border-bottom-right-radius: 22rem;
+        border-top-right-radius: 22rem;
+        border-bottom-left-radius: 2rem;
+        border-top-left-radius: 2rem;
+        background-image: url('/static/romanessco.jpg');
+      }
+      @include phone {
+        width: 60vw;
+        border-radius: 55rem;
       }
     }
   }

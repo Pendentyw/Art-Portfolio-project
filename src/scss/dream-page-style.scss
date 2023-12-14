@@ -153,6 +153,7 @@
 
 .section-book {
   position: relative;
+  height: 70rem;
   @include phone {
     padding-bottom: 1rem;
   }
@@ -165,18 +166,46 @@
     margin-bottom: 15rem;
   }
   @include large-desktop {
-    margin-top: 20rem;
-    margin-bottom: 20rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 
+  .arrow {
+    padding: 2rem;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    z-index: 1;
+    svg {
+      width: 4.5rem;
+      height: 4.5rem;
+      &:hover {
+        color: red;
+      }
+    }
+    &.arrow-next {
+      right: 4rem;
+    }
+
+    &.arrow-prev {
+      display: none;
+      left: 4rem;
+    }
+  }
   .carousel-container {
-    width: 90%;
+    width: 75%;
     height: 40rem;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50.6%, -50%);
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     @include phone {
       position: relative;
       transform: translate(0, 0);
@@ -190,28 +219,27 @@
       display: flex;
       pointer-events: none;
       position: absolute;
-      top: 0;
       left: 0;
 
       .card {
         margin: 2rem;
-        border-radius: 5px;
+        height: 33rem;
 
         img {
-          border-radius: 1rem;
-          height: auto;
-          @include phone {
-            width: 20rem;
-          }
-          @include tablet-portrait {
-            width: 40rem;
-          }
-          @include desktop {
-            width: 50rem;
-          }
-          @include large-desktop {
-            width: 64rem;
-          }
+          border-radius: 11px;
+          height: 100%;
+          // @include phone {
+          //   width: 20rem;
+          // }
+          // @include tablet-portrait {
+          //   width: 40rem;
+          // }
+          // @include desktop {
+          //   width: 50rem;
+          // }
+          // @include large-desktop {
+          //   width: 50rem;
+          // }
         }
       }
     }
@@ -249,25 +277,14 @@
   }
 }
 
-.dream-photo-gallery {
+.artwork-gallery {
   .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    max-width: 1600px;
     img {
-      border-radius: 1.4rem;
-      transition: scale 0.3s ease-out;
-      @include tablet-portrait {
-        margin: 0.5rem;
-        height: 20rem;
+      @include phone {
+        height: 16rem;
       }
       @include desktop {
-        margin: 2rem;
-        height: 35rem;
-      }
-      &:hover {
-        scale: 110%;
+        width: 30rem;
       }
     }
   }
