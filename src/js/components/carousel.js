@@ -29,7 +29,7 @@ export const carousel = () => {
 
     if (parseInt(cards.style.left) >= 0) {
       cards.style.left = '0px';
-      iconPrev.style.color = 'none';
+      iconPrev.style.display = 'none';
     } else {
       iconPrev.style.display = 'flex';
     }
