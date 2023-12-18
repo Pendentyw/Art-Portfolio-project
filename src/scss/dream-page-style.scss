@@ -1,6 +1,7 @@
 @import 'document-style.scss';
 @import 'navigation.scss';
 @import '/src/scss/components/scroll-animations.scss';
+@import '/src/scss/components/footer.scss';
 @import '/src/scss/components/artworksPreview.scss';
 
 .project-description {
@@ -220,10 +221,10 @@
       pointer-events: none;
       position: absolute;
       left: 0;
-
+      transition: all 0.3s;
       .card {
         margin: 2rem;
-        height: 33rem;
+        height: 30rem;
 
         img {
           border-radius: 11px;

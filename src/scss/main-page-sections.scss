@@ -302,6 +302,7 @@
       background-size: cover;
       background-position: center;
       transition: width 0.4s ease-in-out, border-radius 0.6s ease-out;
+
       @include phone {
         margin: 0;
       }
@@ -356,6 +357,7 @@
         border-top-right-radius: 50rem;
         border-bottom-right-radius: 50rem;
         width: 24vw;
+
         @include phone {
           display: none;
         }
@@ -401,18 +403,28 @@
       align-items: start;
       margin: 2rem;
       width: 16vw;
+      transition: all 0.4s;
       &.photo-image-1 {
-        height: 42vw;
+        height: 60rem;
         border-radius: 20rem;
         background-image: url('/static/feathers.jpg');
+        &:hover {
+          border-bottom-left-radius: 2rem;
+          border-top-left-radius: 2rem;
+          scale: 102%;
+        }
       }
       &.photo-image-2 {
-        height: 22vw;
+        height: 28rem;
         border-bottom-right-radius: 22rem;
         border-top-right-radius: 22rem;
         border-bottom-left-radius: 2rem;
         border-top-left-radius: 2rem;
         background-image: url('/static/romanessco.jpg');
+        &:hover {
+          border-radius: 20rem;
+          scale: 107%;
+        }
       }
       @include phone {
         width: 60vw;

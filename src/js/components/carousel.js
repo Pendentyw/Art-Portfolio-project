@@ -13,7 +13,6 @@ export const carousel = () => {
   iconPrev.addEventListener('click', () => {
     position = position + positionOffset;
     cards.style.left = `${position}%`;
-
     checkLimit();
   });
 
@@ -27,7 +26,7 @@ export const carousel = () => {
     let outer = carouselContainer.getBoundingClientRect();
     let inner = cards.getBoundingClientRect();
 
-    if (parseInt(cards.style.left) >= 0) {
+    if (parseInt(cards.style.left) > 0) {
       cards.style.left = '0px';
       iconPrev.style.display = 'none';
     } else {
