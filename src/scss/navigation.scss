@@ -58,8 +58,11 @@
     .home {
       position: absolute;
       top: 50%;
-      left: 5rem;
+      left: 7rem;
       transform: translateY(-40%);
+      @include phone {
+        display: none;
+      }
       a {
         img {
           width: 3rem;

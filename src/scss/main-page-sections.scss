@@ -34,12 +34,9 @@
     display: flex;
     // justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     @include phone {
       justify-content: center;
-    }
-    @include desktop {
-      justify-content: space-around;
     }
 
     .project-description {
@@ -83,9 +80,13 @@
           border-radius: 0;
           filter: brightness(50%);
         }
+        @include tablet-portrait {
+          height: 84vh;
+        }
         @include tablet-landscape {
           width: 26rem;
-          height: 78vh;
+          height: 80vh;
+          margin-bottom: 6rem;
         }
         @include desktop {
           width: 40rem;
@@ -120,10 +121,14 @@
         transition: 0.6s border-radius ease-in, 0.3s scale ease-out;
         object-fit: cover;
         @include phone {
-          width: 8rem;
+          width: 6rem;
           height: 30rem;
+          margin-left: 2rem;
           border-bottom-right-radius: 0;
           border-top-right-radius: 0;
+        }
+        @include tablet-portrait {
+          height: 30rem;
         }
         @include tablet-landscape {
           width: 22rem;
@@ -161,8 +166,8 @@
         height: 48vh;
       }
       @include tablet-portrait {
-        width: 38vw;
-        height: 48vh;
+        width: 31vw;
+        height: 42vh;
       }
       @include large-desktop {
         width: 43vw;
@@ -218,8 +223,8 @@
         height: 60vh;
       }
       @include tablet-portrait {
-        width: 30vw;
-        height: 70vh;
+        width: 27vw;
+        height: 55vh;
       }
       @include tablet-landscape {
         width: 27vw;

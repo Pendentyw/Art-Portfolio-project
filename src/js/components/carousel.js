@@ -1,6 +1,7 @@
 export const carousel = () => {
   const carouselContainer = document.querySelector('.carousel-container');
   const cards = document.querySelector('.cards');
+  const cardsArray = document.querySelectorAll('.card');
   const iconNext = document.querySelector('.arrow-next');
   const iconPrev = document.querySelector('.arrow-prev');
 
