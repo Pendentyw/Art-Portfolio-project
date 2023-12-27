@@ -9,6 +9,8 @@
   position: relative;
   margin-bottom: 5rem;
   @include phone {
+    justify-content: center;
+    margin-bottom: 2rem;
     padding-top: 7rem;
   }
   .project-description {
@@ -21,7 +23,7 @@
     }
     @include phone {
       position: absolute;
-      text-align: end;
+      text-align: center;
     }
     @include tablet-portrait {
       position: absolute;
@@ -43,7 +45,10 @@
     width: 98vw;
     object-fit: cover;
     @include phone {
-      height: 44vh;
+      width: 100vw;
+      height: 50vh;
+      filter: brightness(80%);
+      border-radius: 0;
     }
     @include tablet-portrait {
       width: 90vw;

@@ -17,19 +17,21 @@ if (module.hot) {
 
 //hide navigation on scrolling down
 
-navbarAnimation();
-dropdown();
-previewGalleryImage();
-useScrollAnimations();
-lazyLoad();
+document.addEventListener('DOMContentLoaded', () => {
+  navbarAnimation();
+  dropdown();
+  previewGalleryImage();
+  useScrollAnimations();
+  lazyLoad();
 
-// use carousel
+  // use carousel
 
-carousel();
+  carousel();
 
-// manage video playtime
+  // manage video playtime
 
-const videoToPlay = document.querySelector('.sleepwalking-video');
+  const videoToPlay = document.querySelector('.sleepwalking-video');
 
-playVideoOnScroll(videoToPlay);
-pauseVideoOnMouseEnter(videoToPlay);
+  playVideoOnScroll(videoToPlay);
+  pauseVideoOnMouseEnter(videoToPlay);
+});

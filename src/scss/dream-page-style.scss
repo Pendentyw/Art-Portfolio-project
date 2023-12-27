@@ -27,21 +27,34 @@
     // @include phone {
     //   flex-direction: column-reverse;
     // }
+    .project-description {
+      @include phone {
+        position: absolute;
+        text-align: center;
+        z-index: 1;
+        h2 {
+          color: white;
+        }
+        p {
+          color: white;
+        }
+      }
+    }
     .book-preview-photo {
       border-bottom-left-radius: 25rem;
       border-bottom-right-radius: 25rem;
-      height: 44vh;
       padding-top: 2rem;
       //scale: 130%;
       @include phone {
-        height: 45vh;
-        border-bottom-left-radius: 5rem;
-        border-bottom-right-radius: 5rem;
+        width: 100%;
+        filter: brightness(55%);
+        border-radius: 0;
         padding-top: 0;
       }
-      @include tablet-landscape {
+      @include tablet-portrait {
         height: 50vh;
       }
+
       @include desktop {
         height: 90vh;
       }
@@ -317,7 +330,6 @@
     }
   }
   .container {
-    width: 100%;
     margin-top: 2rem;
     img {
       @include phone {

@@ -23,15 +23,29 @@
   .container {
     justify-content: space-around;
     @include phone {
-      justify-content: start;
-      margin-left: 2rem;
+      justify-content: center;
+    }
+    .project-description {
+      @include phone {
+        text-align: center;
+        position: absolute;
+        z-index: 1;
+        h2 {
+          color: white;
+        }
+        p {
+          color: white;
+        }
+      }
     }
     img {
       width: 10%;
       border-bottom-right-radius: 10rem;
       border-top-left-radius: 10rem;
       @include phone {
-        width: 90%;
+        width: 100%;
+        border-radius: 0;
+        filter: brightness(50%);
       }
       @include tablet-portrait {
         width: 53%;

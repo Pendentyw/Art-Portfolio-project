@@ -389,13 +389,14 @@
   .works-container {
     justify-content: space-evenly;
     @include phone {
-      justify-content: center;
+      justify-content: space-between;
     }
   }
   .project-description {
     text-align: right;
     @include phone {
-      width: 100%;
+      margin-left: 2.5em;
+      width: 60%;
     }
   }
   .photo-images-container {
@@ -410,9 +411,22 @@
       width: 16vw;
       transition: all 0.4s;
       &.photo-image-1 {
-        height: 60rem;
         border-radius: 20rem;
         background-image: url('/static/feathers.jpg');
+        @include phone {
+          margin: 0;
+          height: 33rem;
+          width: 22vw;
+          border-radius: 0rem;
+          border-top-left-radius: 20rem;
+          border-bottom-left-radius: 20rem;
+        }
+        @include tablet-portrait {
+          height: 36rem;
+        }
+        @include desktop {
+          height: 60rem;
+        }
         &:hover {
           border-bottom-left-radius: 2rem;
           border-top-left-radius: 2rem;
@@ -420,19 +434,27 @@
         }
       }
       &.photo-image-2 {
-        height: 28rem;
         border-bottom-right-radius: 22rem;
         border-top-right-radius: 22rem;
         border-bottom-left-radius: 2rem;
         border-top-left-radius: 2rem;
         background-image: url('/static/romanessco.jpg');
+        @include phone {
+          display: none;
+        }
+        @include tablet-portrait {
+          height: 20rem;
+        }
+        @include desktop {
+          height: 33rem;
+        }
         &:hover {
           border-radius: 20rem;
           scale: 107%;
         }
       }
       @include phone {
-        width: 60vw;
+        width: 5rem;
         border-radius: 55rem;
       }
     }
