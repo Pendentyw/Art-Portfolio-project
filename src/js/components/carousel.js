@@ -1,5 +1,7 @@
 export const carousel = () => {
   const initialElement = 0;
+  let correctedFocus = 0;
+  let alwaysVisibleCardsOffset = 0;
   const carouselContainer = document.querySelector('.carousel-container');
   const cardsWrapper = document.querySelector('.cards');
   const images = Array.from(document.querySelectorAll('.cards img'));
@@ -9,12 +11,8 @@ export const carousel = () => {
 
   if (!carouselContainer) return;
 
-  carouselContainer.dataset.currentFocus = initialElement;
-
   let loaded = 0;
   const desired = images.length;
-
-  console.info(images, desired);
 
   const getComputedMargin = (element, key) => {
     let margin = getComputedStyle(element)[key];
@@ -25,39 +23,82 @@ export const carousel = () => {
   const checkForLoaded = () => {
     console.warn('CHECKING', loaded, desired);
     if (loaded === desired) {
-      setCarouselBasedOnFocus(initialElement);
-      setButtons();
+      setCarouselBasedOnFocus(correctedFocus);
+      setButtons(alwaysVisibleCardsOffset);
     }
+  };
+
+  const getCardSizeAt = (index) => {
+    let card;
+
+    if (index !== undefined) {
+      card = cardsArray[index];
+    } else {
+      card = cardsArray.find((card) => card !== undefined);
+    }
+
+    return {
+      width: card.getBoundingClientRect().width,
+      marginLeft: getComputedMargin(card, 'marginLeft'),
+      marginRight: getComputedMargin(card, 'marginRight'),
+    };
   };
 
   const getAllCardsWidthsBasedOnIndex = (index) => {
     let totalWidth = 0;
 
     for (let i = 0; i < index; i++) {
-      const currentCard = cardsArray[i];
-      console.log(currentCard);
+      if (cardsArray[i]) {
+        const { width, marginLeft, marginRight } = getCardSizeAt(i);
 
-      if (currentCard) {
-        const cardWidth = currentCard.getBoundingClientRect().width;
-        const marginLeft = getComputedMargin(currentCard, 'marginLeft');
-        const marginRight = getComputedMargin(currentCard, 'marginRight');
-
-        totalWidth = totalWidth + cardWidth + marginLeft + marginRight;
+        totalWidth = totalWidth + width + marginLeft + marginRight;
       }
     }
 
     return totalWidth;
   };
 
-  const setCarouselBasedOnFocus = (focus) => {
-    let currentCard;
-    if (focus == 0) {
-      currentCard = cardsArray[focus + 1];
+  const getAlwaysDisplayedCardsOffset = () => {
+    const carouselContainerWidth = carouselContainer.getBoundingClientRect().width;
+    const anyCardSize = getCardSizeAt();
+    const totalCardSize = anyCardSize.width + anyCardSize.marginLeft + anyCardSize.marginRight;
+
+    const containerFractionSize = carouselContainerWidth / totalCardSize;
+
+    let displayedCardsCount;
+
+    if (containerFractionSize < 1) {
+      displayedCardsCount = 0;
     } else {
-      currentCard = cardsArray[focus];
+      displayedCardsCount = Math.floor(containerFractionSize - 1);
     }
 
-    console.info('CARDS?', cardsArray);
+    const alwaysDisplayedSize = totalCardSize * displayedCardsCount;
+
+    if (carouselContainerWidth - alwaysDisplayedSize < totalCardSize * 2) {
+      return Math.floor(displayedCardsCount / 2);
+    }
+
+    return 0;
+  };
+
+  const getCorrectedFocus = (focus, cardsAlwaysDisplayedOffset) => {
+    console.warn('FOCUS', focus, alwaysVisibleCardsOffset);
+    if (focus < cardsAlwaysDisplayedOffset) {
+      focus = cardsAlwaysDisplayedOffset;
+    }
+
+    if (focus > cardsArray.length - 1 - cardsAlwaysDisplayedOffset) {
+      focus = cardsArray.length - 1 - cardsAlwaysDisplayedOffset;
+    }
+
+    console.warn('CORRECTED FOCUS', focus);
+
+    return focus;
+  };
+
+  const setCarouselBasedOnFocus = (focus) => {
+    let currentCard = cardsArray[focus];
 
     if (!currentCard) {
       return;
@@ -70,51 +111,52 @@ export const carousel = () => {
     const marginLeft = getComputedMargin(currentCard, 'marginLeft');
     const marginRight = getComputedMargin(currentCard, 'marginRight');
 
-    console.info(
-      'CALCULATED OFFSET',
-      `${
-        carouselContainerWidth / 2 -
-        (cardWidth / 2 + (marginLeft + marginRight) / 2) -
-        previousCardsWidth
-      }px`
-    );
+    let offset =
+      carouselContainerWidth / 2 -
+      (cardWidth / 2 + (marginLeft + marginRight) / 2) -
+      previousCardsWidth;
 
-    if (focus == 0) {
-      cardsWrapper.style.left = `${cardWidth / 4 + (marginLeft + marginRight) / 4}px`;
-      // } else if (focus >= 1) {
-      //   cardsWrapper.style.left = `${
-      //     carouselContainerWidth / 4 -
-      //     (cardWidth + (marginLeft + marginRight) / 2) -
-      //     previousCardsWidth
-      //   }px`;
-    } else if (focus >= 1) {
-      cardsWrapper.style.left = `${
-        carouselContainerWidth / 2 -
-        (cardWidth / 2 + (marginLeft + marginRight) / 2) -
-        previousCardsWidth
-      }px`;
+    const minOffset = (cardsWrapper.getBoundingClientRect().width - carouselContainerWidth) * -1;
+
+    if (offset > 0) {
+      offset = 0;
     }
+
+    /*
+    console.info(
+      `carouselContainerWidth: ${carouselContainerWidth}, cardWidth: ${cardWidth}, margins: ${marginLeft} ${marginRight}, previousCardsWidth: ${previousCardsWidth}, minOffset: ${minOffset}`
+    );
+    console.info('calculatedOffset', offset);
+    */
+
+    if (offset < minOffset) {
+      offset = minOffset;
+    }
+
+    cardsWrapper.style.left = `${offset}px`;
   };
 
-  const setButtons = () => {
+  const setButtons = (visibleCardsOffset) => {
     const currentIndex = carouselContainer.dataset.currentFocus;
 
-    if (currentIndex > 0) {
+    if (currentIndex > visibleCardsOffset) {
       iconPrev.style.display = 'flex';
     } else {
       iconPrev.style.display = 'none';
     }
 
-    if (currentIndex < cardsArray.length - 2) {
+    if (currentIndex < cardsArray.length - 1 - visibleCardsOffset) {
       iconNext.style.display = 'flex';
     } else {
       iconNext.style.display = 'none';
     }
   };
 
-  images.forEach((image) => {
-    console.info(image);
+  alwaysVisibleCardsOffset = getAlwaysDisplayedCardsOffset();
+  correctedFocus = getCorrectedFocus(initialElement, alwaysVisibleCardsOffset);
+  carouselContainer.dataset.currentFocus = correctedFocus;
 
+  images.forEach((image) => {
     if (image.complete) {
       loaded++;
       checkForLoaded();
@@ -134,9 +176,11 @@ export const carousel = () => {
       return;
     }
 
-    setCarouselBasedOnFocus(currentIndex - 1);
-    carouselContainer.dataset.currentFocus = currentIndex - 1;
-    setButtons();
+    const newCorrectedFocus = getCorrectedFocus(currentIndex - 1, alwaysVisibleCardsOffset);
+
+    setCarouselBasedOnFocus(newCorrectedFocus);
+    carouselContainer.dataset.currentFocus = newCorrectedFocus;
+    setButtons(alwaysVisibleCardsOffset);
     //position = position + positionOffset;
     //cards.style.left = `${position}%`;
     //checkLimit();
@@ -145,14 +189,15 @@ export const carousel = () => {
   iconNext.addEventListener('click', () => {
     const currentIndex = Number(carouselContainer.dataset.currentFocus);
 
-    console.info(currentIndex, cardsArray.length);
     if (currentIndex >= cardsWrapper.length - 1) {
       return;
     }
 
-    setCarouselBasedOnFocus(currentIndex + 1);
-    carouselContainer.dataset.currentFocus = currentIndex + 1;
-    setButtons();
+    const newCorrectedFocus = getCorrectedFocus(currentIndex + 1, alwaysVisibleCardsOffset);
+
+    setCarouselBasedOnFocus(newCorrectedFocus);
+    carouselContainer.dataset.currentFocus = newCorrectedFocus;
+    setButtons(alwaysVisibleCardsOffset);
     //position = position - positionOffset;
     //cards.style.left = `${position}%`;
     //checkLimit();

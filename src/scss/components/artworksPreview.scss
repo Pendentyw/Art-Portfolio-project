@@ -1,6 +1,67 @@
 .artwork-gallery {
   flex-wrap: wrap;
   overflow: hidden;
+  .preview-image-container {
+    display: flex;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.596);
+
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 2222;
+
+    @include tablet-portrait {
+      transform: translateY(0%);
+    }
+    .exit-icon {
+      padding: 1rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      &:hover {
+        color: red;
+      }
+    }
+    @include phone {
+      display: none;
+    }
+    @include tablet-portrait {
+      display: none;
+    }
+  }
+  .preview-image {
+    display: flex;
+    object-fit: cover;
+    margin-right: 0rem;
+    // background-image: url('/src/img/hq-goat.jpg');
+    width: 80vw;
+    border-radius: 1rem;
+    @include phone {
+      min-height: 40vh;
+      max-height: 66vh;
+    }
+    @include tablet-portrait {
+      width: 70vw;
+      max-height: 80vh;
+      transform: translateY(0%);
+    }
+    @include tablet-landscape {
+      width: 58vw;
+      max-height: 80vh;
+    }
+    @include desktop {
+      height: 82vh;
+      display: flex;
+      max-width: 40vw;
+    }
+  }
   .container {
     justify-content: center;
     @include phone {
@@ -11,7 +72,7 @@
     }
 
     img {
-      padding: 3rem;
+      padding: 2.5rem;
       // border-radius: 2rem;
       object-fit: cover;
       transition: scale 0.4s ease-in;
@@ -28,5 +89,19 @@
         scale: 105%;
       }
     }
+  }
+}
+
+.show-image-container {
+  display: flex !important;
+}
+
+.stop-scrolling {
+  overflow: hidden;
+  @include phone {
+    margin-right: 0px;
+  }
+  @include tablet-portrait {
+    margin-right: 16px;
   }
 }
