@@ -23,6 +23,7 @@ export const carousel = () => {
   const checkForLoaded = () => {
     console.warn('CHECKING', loaded, desired);
     if (loaded === desired) {
+      alwaysVisibleCardsOffset = getAlwaysDisplayedCardsOffset();
       setCarouselBasedOnFocus(correctedFocus);
       setButtons(alwaysVisibleCardsOffset);
     }
@@ -152,7 +153,7 @@ export const carousel = () => {
     }
   };
 
-  alwaysVisibleCardsOffset = getAlwaysDisplayedCardsOffset();
+  // alwaysVisibleCardsOffset = getAlwaysDisplayedCardsOffset();
   correctedFocus = getCorrectedFocus(initialElement, alwaysVisibleCardsOffset);
   carouselContainer.dataset.currentFocus = correctedFocus;
 
