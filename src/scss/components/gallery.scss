@@ -2,7 +2,6 @@
   display: flex;
   align-self: start;
   flex-direction: row;
-  position: relative;
   @include desktop {
     margin-right: 2rem;
   }

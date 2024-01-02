@@ -1,7 +1,7 @@
 export const previewGalleryImage = () => {
   const previewImageContainer = document.querySelector('.preview-image-container');
   let previewImage = document.querySelector('.preview-image');
-  const galleryImages = document.querySelectorAll('img');
+  const galleryImages = document.querySelectorAll('.gallery-image');
   const navBar = document.querySelector('nav');
   const body = document.querySelector('body');
   const images = Array.from(galleryImages);

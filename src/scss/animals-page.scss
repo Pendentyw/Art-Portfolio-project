@@ -4,6 +4,10 @@
 @import '/src/scss/components/artworksPreview.scss';
 @import '/src/scss/components/footer.scss';
 .about-animals {
+  display: flex;
+  align-self: start;
+  flex-direction: row;
+  position: relative;
   @include phone {
     padding-top: 8rem;
     padding-bottom: 0;
