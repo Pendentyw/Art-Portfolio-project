@@ -30,31 +30,50 @@ export const previewGalleryImage = () => {
       return;
     } else if (event.target == previewImageContainer || event.target == exitIcon) {
       previewImageContainer.classList.remove('show-image-container');
+      previewImageIndex == 0;
       body.classList.remove('stop-scrolling');
+      iconPrev.removeEventListener('click', handlePrevImageChange);
+      iconNext.removeEventListener('click', handleNextImageChange);
 
       navBar.classList.remove('hide-nav');
     }
   };
 
+  const handleNextImageChange = () => {
+    const nextImage = Number(previewImageIndex) + 1;
+    if (nextImage >= images.length) {
+      console.log('toobig');
+      return;
+    }
+
+    changeImageAttributesByIndex(nextImage);
+  };
+
+  const handlePrevImageChange = () => {
+    const previousImage = Number(previewImageIndex) - 1;
+    if (previousImage < 0) {
+      iconPrev.classList.add('hide');
+      console.log('toosmol');
+      return;
+    }
+
+    changeImageAttributesByIndex(previousImage);
+  };
+
   const changeImageAttributesByIndex = (index) => {
-    let image = images.find((image) => image.dataset.index == index);
-    console.log(image);
+    const image = images.find((image) => image.dataset.index == index);
     const imageSource = image.getAttribute('src');
     const imageAlt = image.getAttribute('alt');
-    const imageIndex = index + 1;
     previewImage.src = imageSource;
     previewImage.alt = imageAlt;
-    previewImage.dataset.index = imageIndex;
+    previewImage.dataset.index = index;
     previewImageIndex = index;
-    console.log(previewImage.dataset.index);
-    console.log(previewImage);
   };
 
   const handleImageAttributes = (event) => {
     const imageSource = event.target.src;
     const imageAlt = event.target.alt;
     previewImageIndex = event.target.dataset.index;
-    console.log('previewImageIndex', previewImageIndex);
 
     changePreviewImageAttributes(imageSource, imageAlt);
     if (mediaquery.matches) {
@@ -65,27 +84,8 @@ export const previewGalleryImage = () => {
       body.classList.add('stop-scrolling');
       document.addEventListener('click', handleBackgroundClick);
 
-      iconNext.addEventListener('click', () => {
-        const nextImage = Number(previewImageIndex) + 1;
-        if (nextImage >= images.length) {
-          console.log('toobig');
-          return;
-        }
-        console.log(previewImageIndex);
-        console.log(nextImage);
-        changeImageAttributesByIndex(nextImage);
-      });
-      iconPrev.addEventListener('click', () => {
-        const previousImage = Number(previewImageIndex) - 1;
-        if (previousImage < 0) {
-          iconPrev.classList.add('hide-arrow');
-          console.log('toosmol');
-          return;
-        }
-        console.log(previewImageIndex);
-        console.log(previousImage);
-        changeImageAttributesByIndex(previousImage);
-      });
+      iconNext.addEventListener('click', handleNextImageChange);
+      iconPrev.addEventListener('click', handlePrevImageChange);
     } else {
       return;
     }
