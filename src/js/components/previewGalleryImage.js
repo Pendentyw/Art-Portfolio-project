@@ -1,5 +1,3 @@
-import { pseudoSlider } from './pseudoSlider.js';
-
 export const previewGalleryImage = () => {
   let previewImageIndex;
   let previewImage = document.querySelector('.preview-image');
@@ -30,8 +28,12 @@ export const previewGalleryImage = () => {
       return;
     } else if (event.target == previewImageContainer || event.target == exitIcon) {
       previewImageContainer.classList.remove('show-image-container');
-      previewImageIndex == 0;
       body.classList.remove('stop-scrolling');
+
+      iconPrev.classList.add('show');
+      iconNext.classList.add('show');
+
+      previewImageIndex == 0;
       iconPrev.removeEventListener('click', handlePrevImageChange);
       iconNext.removeEventListener('click', handleNextImageChange);
 
@@ -41,9 +43,16 @@ export const previewGalleryImage = () => {
 
   const handleNextImageChange = () => {
     const nextImage = Number(previewImageIndex) + 1;
+    iconPrev.classList.remove('hide');
+    iconPrev.classList.add('show');
     if (nextImage >= images.length) {
       console.log('toobig');
       return;
+    }
+
+    if (nextImage == images.length - 1) {
+      iconNext.classList.remove('show');
+      iconNext.classList.add('hide');
     }
 
     changeImageAttributesByIndex(nextImage);
@@ -51,10 +60,17 @@ export const previewGalleryImage = () => {
 
   const handlePrevImageChange = () => {
     const previousImage = Number(previewImageIndex) - 1;
+    iconNext.classList.remove('hide');
+    iconNext.classList.add('show');
     if (previousImage < 0) {
-      iconPrev.classList.add('hide');
       console.log('toosmol');
+
       return;
+    }
+
+    if (previousImage == 0) {
+      iconPrev.classList.remove('show');
+      iconPrev.classList.add('hide');
     }
 
     changeImageAttributesByIndex(previousImage);
@@ -75,6 +91,16 @@ export const previewGalleryImage = () => {
     const imageAlt = event.target.alt;
     previewImageIndex = event.target.dataset.index;
 
+    if (previewImageIndex == 0) {
+      iconPrev.classList.add('hide');
+      iconPrev.classList.remove('show');
+    }
+
+    if (previewImageIndex == images.length - 1) {
+      iconNext.classList.add('hide');
+      iconNext.classList.remove('show');
+    }
+
     changePreviewImageAttributes(imageSource, imageAlt);
     if (mediaquery.matches) {
       console.log('mediaqueryt');
@@ -83,6 +109,8 @@ export const previewGalleryImage = () => {
       navBar.classList.add('hide-nav');
       body.classList.add('stop-scrolling');
       document.addEventListener('click', handleBackgroundClick);
+
+      console.log(previewImage.dataset.index);
 
       iconNext.addEventListener('click', handleNextImageChange);
       iconPrev.addEventListener('click', handlePrevImageChange);
