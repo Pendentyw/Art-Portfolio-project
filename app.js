@@ -20,18 +20,7 @@ if (module.hot) {
 document.addEventListener('DOMContentLoaded', () => {
   navbarAnimation();
   dropdown();
-  previewGalleryImage();
   useScrollAnimations();
-  lazyLoad();
 
   // use carousel
-
-  carousel();
-
-  // manage video playtime
-
-  const videoToPlay = document.querySelector('.sleepwalking-video');
-
-  playVideoOnScroll(videoToPlay);
-  pauseVideoOnMouseEnter(videoToPlay);
 });
