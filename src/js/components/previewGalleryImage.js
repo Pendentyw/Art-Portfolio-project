@@ -78,7 +78,11 @@ export const previewGalleryImage = () => {
 
   const changeImageAttributesByIndex = (index) => {
     const image = images.find((image) => image.dataset.index == index);
-    const imageSource = image.getAttribute('src');
+    let imageSource = image.getAttribute('src');
+
+    if (imageSource.includes('placeholder-img')) {
+      imageSource = image.dataset.src;
+    }
     const imageAlt = image.getAttribute('alt');
     previewImage.src = imageSource;
     previewImage.alt = imageAlt;

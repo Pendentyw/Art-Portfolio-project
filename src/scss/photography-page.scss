@@ -148,6 +148,37 @@
   }
 }
 
+.arrow {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+  padding: 1rem;
+  background-color: rgba(80, 80, 80, 0.316);
+  color: white;
+  border: 0;
+  svg {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+
+  &.arrow-prev-preview {
+    left: 1rem;
+  }
+  &.arrow-next-preview {
+    right: 1rem;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
 .show-image-container {
   display: flex !important;
 }
