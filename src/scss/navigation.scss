@@ -39,14 +39,14 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  box-shadow: 2px 2px 10px rgba(159, 159, 159, 0.132);
+  box-shadow: 2px 2px 10px var(--shadow-color);
 
   .nav-bar {
     display: flex;
     position: relative;
     height: 5.5rem;
     width: 100%;
-    background-color: rgb(244, 239, 239);
+    background-color: var(--nav-color);
     @include phone {
       justify-content: space-around;
     }
@@ -115,24 +115,13 @@
         font-size: 22px;
       }
 
-      // .burger-icon {
-      //   padding: 1rem;
-      //   @include tablet-portrait {
-      //     width: 70px;
-      //     height: 70px;
-      //   }
-      //   @include desktop {
-      //     display: none;
-      //   }
-      // }
-
       a {
         padding: 1.2rem;
         text-decoration: none;
-        color: rgb(83, 83, 83);
+        color: var(--nav-link-color);
         transition: color 0.4 ease-out;
         &:hover {
-          color: rgb(190, 133, 123);
+          color: var(--nav-link-hover-color);
         }
       }
     }

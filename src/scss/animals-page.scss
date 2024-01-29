@@ -9,7 +9,7 @@
   flex-direction: row;
   position: relative;
   @include phone {
-    padding-top: 8rem;
+    padding-top: 5rem;
     padding-bottom: 0;
   }
   .container {
@@ -48,29 +48,6 @@
         @include desktop {
           margin: 2rem;
         }
-        // &:first-child {
-        // @include tablet-portrait {
-        //   width: 100vw;
-        // }
-
-        // @include desktop {
-
-        // }
-        // @include large-desktop {
-        //   scale: 130%;
-        // }
-        // }
-        // &:nth-child(2) {
-        //   @include tablet-portrait {
-        //     width: 100%;
-        //   }
-
-        //   @include desktop {
-        //   }
-        //   &:hover {
-        //     scale: 120%;
-        //   }
-        // }
       }
     }
 
@@ -82,10 +59,10 @@
         z-index: 1;
         margin-left: 0;
         h2 {
-          color: white;
+          color: var(--light-text-color);
         }
         p {
-          color: white;
+          color: var(--light-text-color);
         }
       }
 

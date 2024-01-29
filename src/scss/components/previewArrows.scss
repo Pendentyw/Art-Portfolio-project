@@ -1,0 +1,40 @@
+.arrow {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+  padding: 1rem;
+  background-color: var(--button-background-color);
+  color: var(--light-text-color);
+  border: 0;
+
+  @include desktop {
+    display: none;
+  }
+
+  svg {
+    width: 2.3rem;
+    height: 2.3rem;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--icon-hover-color);
+    }
+  }
+
+  &.arrow-prev-preview {
+    left: 1rem;
+  }
+  &.arrow-next-preview {
+    right: 1rem;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}

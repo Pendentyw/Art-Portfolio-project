@@ -1,3 +1,5 @@
+@import '/src/scss/components/previewArrows.scss';
+
 .artwork-gallery {
   flex-wrap: wrap;
   overflow: hidden;
@@ -8,7 +10,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(18, 18, 18, 0.596);
+    background-color: var(--preview-color);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     position: fixed;
@@ -23,12 +25,12 @@
       padding: 1rem;
       width: 3.5rem;
       height: 3.5rem;
-      color: white;
+      color: var(--light-text-color);
       position: absolute;
       top: 1rem;
       right: 1rem;
       &:hover {
-        color: red;
+        color: var(--hover-text-color);
       }
     }
     @include phone {
@@ -38,45 +40,13 @@
       display: none;
     }
 
-    .arrow {
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 5000;
-      padding: 1rem;
-      background-color: rgba(80, 80, 80, 0.316);
-      color: white;
-      border: 0;
-      svg {
-        width: 2.3rem;
-        height: 2.3rem;
-      }
-
-      &.arrow-prev-preview {
-        left: 1rem;
-      }
-      &.arrow-next-preview {
-        right: 1rem;
-      }
-    }
-
-    .hide {
-      display: none;
-    }
-
-    .show {
-      display: flex;
-    }
-
     .preview-image {
       display: flex;
       object-fit: cover;
       margin-right: 0rem;
-      // background-image: url('/src/img/hq-goat.jpg');
       width: 80vw;
       border-radius: 1rem;
-      box-shadow: 2 2 33 rgba(23, 23, 23, 0.446);
+      box-shadow: 2 2 33 var(--shadow-color);
       @include phone {
         min-height: 40vh;
         max-height: 66vh;
@@ -111,9 +81,16 @@
       @include phone {
         border-radius: 1rem;
         padding: 0.4rem;
+        &:hover {
+          scale: 103%;
+        }
       }
       @include desktop {
+        border-radius: 3rem;
         width: 30%;
+        &:hover {
+          scale: 104%;
+        }
       }
     }
   }

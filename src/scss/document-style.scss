@@ -1,4 +1,5 @@
 @import 'mixins.scss';
+@import './components/colors.scss';
 
 * {
   box-sizing: border-box;
@@ -26,7 +27,7 @@ body {
 h1 {
   padding-bottom: 2rem;
   font-size: 2.4rem;
-  color: rgb(38, 38, 38);
+  color: var(--text-color);
 
   @include phone {
     font-size: 2.8rem;
@@ -41,18 +42,12 @@ h1 {
 
 h2 {
   font-size: 3rem;
-  color: rgb(38, 38, 38);
-  // &:hover {
-  //   color: ;
-  // }
+  color: var(--text-color);
 }
 
 section {
   width: 100vw;
   max-width: 100%;
-  // scroll-snap-align: start;
-  // scroll-snap-stop: normal;
-  // scroll-padding-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -81,7 +76,7 @@ section {
 }
 .project-description {
   padding: 7vw;
-  color: rgb(66, 66, 66);
+  color: var(--text-color);
   @include phone {
     max-width: 20rem;
   }
@@ -138,7 +133,7 @@ section {
     h2 {
       transition: color 0.3s ease-out;
       &:hover {
-        color: rgb(201, 47, 47);
+        color: var(--hover-text-color);
       }
     }
   }

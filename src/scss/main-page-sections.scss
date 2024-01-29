@@ -12,7 +12,6 @@
 
 .project-description {
   @include phone {
-    // background-color: rgba(255, 255, 255, 0.359);
     margin: 0;
     padding: 2rem;
     width: 60%;
@@ -32,7 +31,6 @@
 
   .container {
     display: flex;
-    // justify-content: space-evenly;
     align-items: center;
     justify-content: space-around;
     @include phone {
@@ -287,10 +285,6 @@
 
 .animals {
   justify-content: start;
-  // @include phone {
-  //   padding-top: 0rem;
-  // }
-
   .animals-images-container {
     align-items: center;
     @include phone {

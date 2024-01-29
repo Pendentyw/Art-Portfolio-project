@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   overflow: hidden;
   @include phone {
-    padding-top: 8rem;
+    padding-top: 5rem;
   }
   @include tablet-portrait {
     padding-top: 4rem;
@@ -31,10 +31,10 @@
         position: absolute;
         z-index: 1;
         h2 {
-          color: white;
+          color: var(--light-text-color);
         }
         p {
-          color: white;
+          color: var(--light-text-color);
         }
       }
     }
