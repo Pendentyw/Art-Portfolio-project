@@ -20,11 +20,11 @@
       rel="stylesheet" />
     <link
       rel="stylesheet"
-      href="../scss/fox-page-style.scss" />
+      href="/src/scss/animals-page.scss" />
+    <title>Document</title>
     <script
       type="module"
-      src="/src/js/simplePages.js"></script>
-    <title>Document</title>
+      src="/src/js/animalsPage.js"></script>
   </head>
   <body>
     <nav class="nav">
@@ -53,40 +53,42 @@
             </div>
             <div class="dropdown default">
               <ul>
-                <li><a href="/index.html/#section-dream">Portfolio</a></li>
-                <li><a href="/src//pages/dreamPage.html">Dreams</a></li>
-                <li><a href="/src//pages/foxPage.html">Fox</a></li>
-                <li><a href="/src//pages/animalsPage.html">Animalization</a></li>
-                <li><a href="/src//pages/photographyPage.html">Photography</a></li>
+                <li><a href="/index/#section-dream">Portfolio</a></li>
+                <li><a href="/dream-waves">Dreams</a></li>
+                <li><a href="/fox">Fox</a></li>
+                <li><a href="/animalization">Animalization</a></li>
+                <li><a href="/photography">Photography</a></li>
               </ul>
             </div>
           </div>
           <ul class="desktop-links">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/index.html/#section-dream">Portfolio</a></li>
-            <li><a href="/src//pages/dreamPage.html">Dreams</a></li>
-            <li><a href="/src//pages/foxPage.html">Fox</a></li>
-            <li><a href="/src//pages/animalsPage.html">Animalization</a></li>
-            <li><a href="/src//pages/photographyPage.html">Photography</a></li>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/index/#section-dream">Portfolio</a></li>
+            <li><a href="/dream-waves">Dreams</a></li>
+            <li><a href="/fox">Fox</a></li>
+            <li><a href="/animalization">Animalization</a></li>
+            <li><a href="/photography">Photography</a></li>
           </ul>
         </div>
       </div>
     </nav>
-
     <div class="sections-container">
-      <section class="about-project">
-        <div class="container">
-          <img
-            src="/src/img/fox-page/foxframes.jpg"
-            alt="wall gallery with illustrations"
-            class="ease-in-left-animation" />
-
+      <section class="about-animals">
+        <div class="container animals-container">
           <div class="project-description opacity-animation">
-            <h2>Fox</h2>
+            <h2>Animalization</h2>
             <p>
-              Theme based on asian legends about fox dieties. Artworks present life cycle and
-              envairoments of kitsune fox
+              Every human wields an animal in himself. Illustrations mix humans with animal's
+              characteristics
             </p>
+          </div>
+          <div class="eyes-container ease-in-left-animation">
+            <img
+              src="/src/img/hq-eye.jpg"
+              alt="eye drawing" />
+            <!-- <img
+              src="/src/img/hq-eye-2.jpg"
+              alt="eye drawing" /> -->
           </div>
         </div>
       </section>
@@ -104,7 +106,6 @@
             <path
               d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
           </svg>
-          <div class="image-preview-container"></div>
           <button class="arrow-prev-preview arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
             <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
@@ -121,54 +122,34 @@
         <div class="container">
           <img
             class="gallery-image"
-            src="/src/img/hq-fox.jpg"
+            src="/src/img/hq-borbo.jpg"
             data-index="0"
-            alt="running fox" />
+            alt="bird illustration" />
           <img
             class="gallery-image"
-            src="/src/img/hq-kitsune.jpg"
+            src="/src/img/hq-goat2.jpg"
             data-index="1"
-            alt="fox-woman" />
+            alt="goat illustration" />
           <img
             class="gallery-image"
-            src="/src/img/hq-plant.jpg"
+            src="/src/img/hq-fish.jpg"
             data-index="2"
-            alt="plant shapes" />
+            alt="fish illustration" />
           <img
             class="gallery-image"
-            src="/src/img/hq-bambo-vertical.jpg"
+            src="/src/img/hq-fur.jpg"
             data-index="3"
-            alt="scenery of red bambo forest" />
+            alt="fur illustration" />
           <img
             class="gallery-image"
-            src="/src/img/hq-landscape.jpg"
+            src="/src/img/hq-eyes.jpg"
             data-index="4"
-            alt="illustration of montains and lake" />
+            alt="eyes illustration" />
           <img
             class="gallery-image"
-            src="/src/img/hq-plant2.jpg"
+            src="/src/img/hq-eye.jpg"
             data-index="5"
-            alt="plant shapes" />
-        </div>
-      </section>
-
-      <section class="fox-about-technique">
-        <div class="container">
-          <div class="project-description opacity-animation">
-            <h2>Techniques</h2>
-            <p>
-              I used many different medias to make these artworks. Starting from traditional drawing
-              and painting to shape some interesting forms and create basic textures, then filling
-              it with colors digitialy.
-            </p>
-            <img
-              src="/src/img/fox-page/scan-fox-textures-transparent.png"
-              alt="painting scan" />
-          </div>
-          <img
-            class="fox-heads"
-            src="/src/img/fox-page/fox-faces.png"
-            alt="Three fox faces" />
+            alt="eye illustration" />
         </div>
       </section>
     </div>

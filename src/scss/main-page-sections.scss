@@ -40,18 +40,18 @@
     .project-description {
       h2 {
         @include phone {
-          color: white;
+          color: var(--light-text-color);
         }
       }
       h1 {
         @include phone {
-          color: white;
+          color: var(--light-text-color);
         }
       }
       @include phone {
         position: absolute;
         z-index: 1;
-        color: white;
+        color: var(--light-text-color);
         text-align: center;
       }
       @include tablet-portrait {
