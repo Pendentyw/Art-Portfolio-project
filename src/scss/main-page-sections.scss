@@ -26,7 +26,7 @@
 
 .welcome-section {
   @include desktop {
-    padding-top: 2rem;
+    padding-top: 0rem;
   }
 
   .container {
@@ -47,6 +47,11 @@
         @include phone {
           color: var(--light-text-color);
         }
+        @include desktop {
+          font-size: 8rem;
+          margin-left: -0.8rem;
+          padding-bottom: 0.5rem;
+        }
       }
       @include phone {
         position: absolute;
@@ -58,10 +63,11 @@
         max-width: 25rem;
       }
       @include desktop {
-        max-width: 40rem;
+        max-width: 55rem;
       }
       @include large-desktop {
         min-width: 60rem;
+        padding-bottom: 19rem;
       }
     }
     .welcome-image {
