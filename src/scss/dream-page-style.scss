@@ -17,6 +17,7 @@
 
 .books-about-project {
   padding: 0;
+  height: 100vh;
   margin-bottom: 2rem;
   @include phone {
     margin-top: 6rem;
@@ -30,6 +31,7 @@
     .project-description {
       @include phone {
         position: absolute;
+        margin-bottom: 10rem;
         text-align: center;
         z-index: 1;
         h2 {
@@ -87,7 +89,7 @@
     object-fit: cover;
     .diagrams-background {
       position: absolute;
-      top: 2rem;
+      top: 12rem;
       padding-right: 2rem;
       @include phone {
         top: 4rem;
@@ -101,7 +103,7 @@
         width: 40%;
       }
       @include large-desktop {
-        top: 3rem;
+        top: 0rem;
         width: 37%;
       }
     }
@@ -111,6 +113,8 @@
     justify-content: none;
     align-items: center;
     overflow: hidden;
+    padding-bottom: 11rem;
+    padding-top: 11rem;
 
     .dream-book-background {
       position: absolute;
@@ -135,6 +139,7 @@
   .psycho-container {
     position: relative;
     justify-content: space-between;
+    padding-top: 11rem;
 
     .project-description {
       margin-right: 6rem;
@@ -158,6 +163,7 @@
       }
 
       @include desktop {
+        top: 30%;
         width: 40%;
       }
       @include large-desktop {
@@ -169,6 +175,7 @@
 
 .section-book {
   position: relative;
+
   @include phone {
     margin: 0;
     padding: 0;
@@ -185,7 +192,7 @@
   }
   @include large-desktop {
     margin-top: 0rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
   }
 
   .carousel-arrow {
@@ -200,7 +207,9 @@
     svg {
       padding: 0.8rem;
       width: 4rem;
-      height: 4rem;
+      height: 6rem;
+      box-shadow: 1 0 10 var(--shadow-color);
+
       background-color: var(--button-background-color);
       color: rgb(9, 9, 9);
       transition: all 0.3s ease-in-out;

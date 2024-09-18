@@ -26,6 +26,7 @@
       justify-content: center;
     }
     .project-description {
+      margin-bottom: 10rem;
       @include phone {
         text-align: center;
         position: absolute;
